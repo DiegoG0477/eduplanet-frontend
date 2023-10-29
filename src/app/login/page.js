@@ -15,8 +15,6 @@ function LoginPage() {
             <ButtonFormTransparent text="Registrate"/>
         </div>
       </div>
-      
-      
     </div>
   );
 }

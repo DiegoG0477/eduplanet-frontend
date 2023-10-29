@@ -16,10 +16,17 @@ body{
 }
 .line_form{
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: #D8D8D8;
 }
 .link_button_register{
     width: 21vw;
     margin: 1vh auto;
+}
+.register_form{
+    width: 60vw;
+    height: 37vw;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    margin: 15px auto;
 }

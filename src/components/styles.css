@@ -6,7 +6,9 @@
     background-color: #203880;
 }
 .logo{
-    margin-left: 300px;
+    margin-left: 26vw;
+    width: 14vw;
+    height: 10vh;
     color: white;
 }
 .title_form{
@@ -24,13 +26,14 @@
     background-color: transparent;
 }
 .password__container{
+    display: flex;
     position: relative;
+    align-items: center;
 }
 .imagen_password{
     position: absolute;
     right: 10px;
-    top: auto;
-    bottom: auto;
+
     width: 1.5vw;
     height: 3vh;
 }
@@ -39,7 +42,7 @@
     border: 2px solid #203880;
 }
 .inputForm__container{
-    margin-top: 40px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
 }
@@ -53,9 +56,9 @@
     border: none;
     color: #ffffff;
     font-weight: bold;
+    margin: 1vh;
 }
 .button__container{
-    margin-top: 45px;
     display: flex;
     justify-content: center;
 }
@@ -70,6 +73,32 @@
     color: #3B61D1;
     font-weight: bold;
 }
+.inputFormLogin{
+    margin-top: 6vh;
+}
 .text_cuenta{
     color: #3B61D1;
+    margin: 1vh;
+}
+.register__container{
+    display: flex;
+    justify-content: center;
+}
+.colum{
+    margin: 0 2vw;
+}
+.list_text{
+    color: #676767;
+    font-size: 10px;
+    margin-right: 2vw;
+}
+.terminos{
+    text-align: center;
+    color: #676767;
+    font-size: 10px;
+}
+.title_form_register{
+    color: #203880;
+    padding-top: 3vh;
+    text-align: center;
 }
