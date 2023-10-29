@@ -1,8 +1,8 @@
-import React from 'react'
-
-function ButtonForm() {
+function ButtonForm(props) {
   return (
-    <div>ButtonForm</div>
+    <div className="button__container">
+      <button className="button_form">{props.text}</button>
+    </div>
   )
 }
 

@@ -9,25 +9,30 @@
     margin-left: 300px;
     color: white;
 }
-.login__container{
-    width: 35%;
-    height: 37vw;
-    background-color: #EDEDED;
-    border-radius: 10px;
-}
 .title_form{
     color: #203880;
-    margin-top: 50px;
+    padding-top: 30px;
     text-align: center;
 }
 .input_form{
-    width: 25vw;
+    width: 20vw;
     height: 2.5vw;
     font-size: 17px;
-    padding: 10px 5px;
+    padding: 10px 10px;
     border-radius: 5px;
     border: 2px solid #B7B7B7;
     background-color: transparent;
+}
+.password__container{
+    position: relative;
+}
+.imagen_password{
+    position: absolute;
+    right: 10px;
+    top: auto;
+    bottom: auto;
+    width: 1.5vw;
+    height: 3vh;
 }
 .input_form:focus{
     outline: none;
@@ -37,4 +42,34 @@
     margin-top: 40px;
     display: flex;
     justify-content: center;
+}
+.button_form{
+    width: 21vw;
+    height: 4vw;
+    font-size: 20px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: #203880;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+.button__container{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+.button_transparent{
+    width: 21vw;
+    height: 4vw;
+    font-size: 20px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 3px solid #203880;
+    color: #3B61D1;
+    font-weight: bold;
+}
+.text_cuenta{
+    color: #3B61D1;
 }

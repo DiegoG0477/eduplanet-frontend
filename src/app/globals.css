@@ -3,7 +3,23 @@ body{
     margin: 0;
 }
 .login_form{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    width: 35%;
+    height: 37vw;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+.text_form{
+    text-align: center;
+    font-size: 13px;
+    color: #3B61D1;
+}
+.line_form{
+    width: 100%;
+    height: 2px;
+    background-color: #D8D8D8;
+}
+.link_button_register{
+    width: 21vw;
+    margin: 1vh auto;
 }
