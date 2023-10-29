@@ -1,95 +1,106 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import React from 'react';
+import Image from "next/image";
+import imgBanner from "@/public/assets/science-education-concepts-banner-vector.jpg";
+import "./globals.css";
+import CardStore from "../components/CardsStore";
+import CardBlog from "@/components/CardBlog";
+import Img from "next/image";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+function HomePage() {
+    return (
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <div className="banner">
+                <div className="oval yellow"></div>
+                <div className="oval green"></div>
+                <Image src={imgBanner} alt="image_banner" className="imgBanner" />
+            </div>
+
+            <div className="contain_section">
+                <div className="title_section store">
+                    <Img src={imgBanner} alt={""} className="title_logo"/>
+                    <div className="title_store">
+                        <h3 className="text_title">STORE</h3>
+                    </div>
+                </div>
+                <div className="contain_store">
+                    <CardStore
+                        image={imgBanner}
+                        titulo="La guia Santillana 1"
+                        precio="$265.87"
+                    />
+                    <CardStore
+                        image={imgBanner}
+                        titulo="La guia Santillana 2"
+                        precio="$265.87"
+                    />
+                    <CardStore
+                        image={imgBanner}
+                        titulo="La guia Santillana 3"
+                        precio="$265.87"
+                    />
+                    <CardStore
+                        image={imgBanner}
+                        titulo="La guia Santillana 4"
+                        precio="$265.87"
+                    />
+
+                </div>
+                <div className="button_section store">
+                    <h1 className="text_button_section">ver mas</h1>
+                </div>
+            </div>
+
+            <div className="contain_section">
+                <div className="title_section blogs">
+                    <Img src={imgBanner} alt={""} className="title_logo"/>
+                    <div className="title_store">
+                        <h3 className="text_title">BLOGS</h3>
+                    </div>
+                </div>
+                <div className="contain_blogs">
+                    <CardBlog
+                        image={imgBanner}
+                        titulo="La guia Santillana 4"
+                        detalles="Flor furgiuele | 9 octubre, 2023 | Blog"
+                        descripcion="Dedicar nuestra vida a la docencia, es mucho más que transmitir conocimientos. En realidad, es un estilo de vida que conlleva practicar constantemente la observación, la empatía, la buena comunicación y que nos impulsa a ser entusiastas y creadores constantes."
+
+                    />
+                    <CardBlog
+                        image={imgBanner}
+                        titulo="La guia Santillana 4"
+                        detalles="Flor furgiuele | 9 octubre, 2023 | Blog"
+                        descripcion="Dedicar nuestra vida a la docencia, es mucho más que transmitir conocimientos. En realidad, es un estilo de vida que conlleva practicar constantemente la observación, la empatía, la buena comunicación y que nos impulsa a ser entusiastas y creadores constantes."
+
+                    />
+                    <CardBlog
+                        image={imgBanner}
+                        titulo="La guia Santillana 4"
+                        detalles="Flor furgiuele | 9 octubre, 2023 | Blog"
+                        descripcion="Dedicar nuestra vida a la docencia, es mucho más que transmitir conocimientos. En realidad, es un estilo de vida que conlleva practicar constantemente la observación, la empatía, la buena comunicación y que nos impulsa a ser entusiastas y creadores constantes."
+
+                    />
+                </div>
+                <div className="button_section blogs">
+                    <h1 className="text_button_section">ver mas</h1>
+                </div>
+            </div>
+
+            <div className="contain_section">
+                <div className="title_section cursos">
+                    <Img src={imgBanner} alt={""} className="title_logo"/>
+                    <div className="title_store">
+                        <h3 className="text_title">CURSOS</h3>
+                    </div>
+                </div>
+                <div className="contain_cursos">
+                    carrusel
+                </div>
+                <div className="button_section cursos">
+                    <h1 className="text_button_section">ver mas</h1>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    );
 }
+
+export default HomePage;
