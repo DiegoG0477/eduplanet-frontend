@@ -13,7 +13,7 @@ export default function BookCard(props) {
       <div className="book-info">
         <h4>La Guia Santillana 1 - Edición Primaria 2022</h4>
 
-        <div style={{display:'flex', justifyContent:'space-between'}}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div className="icons-container">
             <BookCardButton icon="add_shopping_cart" iconClass="cart" />
             <div style={{ marginLeft: "1vw" }}>

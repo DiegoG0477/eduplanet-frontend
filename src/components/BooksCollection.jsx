@@ -1,9 +1,10 @@
 import React from "react";
 import "./styles.css";
-import BannerImage from "@/public/assets/banner-store.png";
+// import BannerImage from "@/public/assets/banner-store.png";
 //carousel example https://codepen.io/Schepp/pen/WNbQByE
 import StoreCarouselCell from "./StoreCaroucelCell";
 import Link from "next/link";
+
 //usar paginaciones en la API del backend
 
 export default function BooksCollection(props) {
@@ -14,7 +15,7 @@ export default function BooksCollection(props) {
         <Link href="/store">
           <h2 className="collection-title">
             Ver Más{" "}
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
+            <span className="material-symbols-outlined">arrow_forward_ios</span>
           </h2>
         </Link>
       </div>
