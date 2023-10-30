@@ -1,3 +1,4 @@
+
 import React from "react";
 import MainSectionBanner from "@/components/MainSectionBanner";
 import BannerImage from "@/public/assets/banner-store.png";
@@ -11,7 +12,7 @@ export default function Store(){
             bannerImage={BannerImage}/>
 
             <BooksCollection
-            collectionTitle='Lo más comprado'/>
+            collectionTitle='Lo más vendido'/>
         </>
     )
 }

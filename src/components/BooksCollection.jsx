@@ -1,42 +1,30 @@
 import React from "react";
 import "./styles.css";
-import Flickity from 'react-flickity-component'
 import BannerImage from "@/public/assets/banner-store.png";
-import Img from "next/image";
 //carousel example https://codepen.io/Schepp/pen/WNbQByE
-
-const flickityOptions = {
-    initialIndex: 2
-}
+import StoreCarouselCell from "./StoreCaroucelCell";
+import Link from "next/link";
+//usar paginaciones en la API del backend
 
 export default function BooksCollection(props) {
   return (
     <div className="collection-container">
-      <h2 className="collection-title">{props.collectionTitle}</h2>
+      <div className="collection-head">
+        <h2 className="collection-title">{props.collectionTitle}</h2>
+        <Link href="/store">
+          <h2 className="collection-title">
+            Ver Más{" "}
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </h2>
+        </Link>
+      </div>
 
-    <Flickity
-      className={'carousel'} // default ''
-      elementType={'div'} // default 'div'
-      options={flickityOptions} // takes flickity options {}
-      disableImagesLoaded={false} // default false
-      reloadOnUpdate // default false
-      static // default false
-    >
-        <div>
-            <p>ola mubdi</p>
-            <Img src={BannerImage}/>
-        </div>
-        <div>
-            <p>ola mubdi</p>
-            <Img src={BannerImage}/>
-        </div>
-        <div>
-            <p>ola mubdi</p>
-            <Img src={BannerImage}/>
-        </div>
-    </Flickity>
-  
-
+      <div className="carousel" data-flickity>
+        <StoreCarouselCell />
+        <StoreCarouselCell />
+        <StoreCarouselCell />
+        <StoreCarouselCell />
+      </div>
     </div>
   );
 }

@@ -1,10 +1,17 @@
+"use client";
 // import Nav from "@/components/Nav";
-import '../globals.css';
+import "../globals.css";
+import Script from "next/script";
 function StoreLayout({ children }) {
-  return <div>
-    {/* <Nav/> */}
-    {children}
-    </div>;
+  return (
+    <>
+      <body>
+        {/* <Nav/> */}
+        {children}
+        <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" />
+      </body>
+    </>
+  );
 }
 
 export default StoreLayout;
