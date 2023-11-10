@@ -75,3 +75,13 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.title_vermas{
+    text-align: center;
+    color: #144729;
+    margin: 6vh 0;
+    font-size: 2.8rem;
+}
+.img_blog_vermas{
+    width: 100%;
+    height: 55vh;
+}
