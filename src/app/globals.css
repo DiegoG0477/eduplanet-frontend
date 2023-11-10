@@ -31,6 +31,7 @@ body{
     margin: 15px auto;
 }
 .title_blog_page{
+    margin-top: 6vh;
     color: #144729;
     height: 8vh;
     font-size: 2.5rem;
