@@ -2,6 +2,40 @@
 
 .nav{
   background-color: #203880;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  padding-left: 2vw;
+  display: flex;
+  justify-content: left;
+
+}
+
+.nav-logo{
+  height: 8vh;
+  width: 11.7vw;
+}
+
+.nav-links ul{
+  margin-top: 1.7vh;
+  list-style: none;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+}
+
+.auth-nav-section{
+  margin-top: 1vh;
+  width: 40vw;
+  display: flex;
+  justify-content: right;
+}
+
+.auth-nav-section button{
+  margin-left: 2vw;
+  height: 7vh;
+  width: 9vw;
 }
 
 .main-section-banner {
@@ -221,5 +255,3 @@
   display: flex;
   justify-content: space-around;
 }
-
-
