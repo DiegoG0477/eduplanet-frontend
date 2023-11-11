@@ -1,4 +1,5 @@
 body{
+  margin: 0;
     padding: 0;
     margin: 0;
 }
@@ -74,4 +75,211 @@ body{
 .recient_blog__container{
     display: flex;
     justify-content: space-between;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.55);
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.banner {
+  position: relative;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.imgBanner {
+  width: 1050px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.oval {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+}
+.yellow {
+  width: 1000px;
+  height: 830px;
+  background-color: #F2AE2F;
+  left: -200px;
+  bottom: -200px;
+}
+
+.green {
+  width: 420px;
+  height: 600px;
+  background-color: #2BB060;
+  right: -100px;
+  top: -100px;
+}
+
+.title_section{
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.title_logo{
+  height: 50px;
+  width: auto;
+  margin-left: 30px;
+
+}
+
+.title_store{
+  margin-left: 30px;
+  border-left: solid white;
+
+}
+
+.text_title{
+  margin-left: 30px;
+  color: white;
+}
+
+.contain_store  {
+  justify-content: center;
+  height: 420px;
+  display: flex;
+  background: rgba(32, 56, 128, 0.2);
+}
+.contain_blogs{
+  align-items: center;
+  justify-content: center;
+  height: 470px;
+  display: flex;
+  background: rgba(108, 148, 122, 0.2);
+}
+.contain_cursos{
+  justify-content: center;
+  height: 400px;
+  display: flex;
+  background: rgba(183, 142, 155, 0.2);
+}
+
+
+.button_section{
+  height: 100px;
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.store{
+background-color: #203880
+}
+.blogs{
+  background-color: #2BB060;
+}
+.cursos{
+  background-color: #80203D;
+}
+
+.text_button_section {
+  margin-left: 45%;
+  line-height: 100px;
+  color: white;
+}
+
+.contain_section{
+  margin-bottom: 100px;
+}
+
+.multimedia_banner{
+  background-color: #80203D;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.multimedia_logo_banner{
+  height: 75px;
+  width: auto;
+  margin-left: 40px;
+
+}
+
+.multimedia_img_banner{
+  width: 850px;
+  height: auto;
+  margin: 40px;
+}
+.contain_img_text{
+  display: flex;
+}
+
+.contain_text_multimedia{
+  margin: 50px;
+}
+
+.multimedia_title{
+  color: white;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.multimedia_text{
+  color: white;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 22px;
+}
+
+.title_multimedia{
+  margin-left: 30px;
+  border-left: solid white;
+}
+
+.contain_logo_title{
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+}
+
+.title_multimedia_text{
+  margin: 10px;
+  margin-left: 30px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 4px;
+  font-size: 35px;
+}
+
+.contain_videos{
+  margin: 40px;
+}
+
+.contain_text_video{
+  width: 500px;
+  border-bottom: solid #80203D;
+  margin-left: 40px;
+}
+.text_video_reciente{
+  color: #80203D;
+  font-weight: 400;
+
+}
+.contain_carrusel{
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+
+}
+
+.img_carrusel{
+  width: 450px;
+  height: auto;
+  margin: 40px;
 }
