@@ -1,4 +1,5 @@
 import "@/components/Styles.css";
+import Img from "next/image";
 
 export default function CardBlogMain(props) {
 

@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from "next/image";
 import imgBanner from "@/public/assets/science-education-concepts-banner-vector.jpg";
 import "./globals.css";
 import CardStore from "../components/CardsStore";
-import CardBlogMain from "@/components/CardBlogMainMain";
+import CardBlogMain from "@/components/CardBlogMain";
 import Img from "next/image";
 
 function HomePage() {
@@ -12,7 +11,7 @@ function HomePage() {
             <div className="banner">
                 <div className="oval yellow"></div>
                 <div className="oval green"></div>
-                <Image src={imgBanner} alt="image_banner" className="imgBanner" />
+                <Img src={imgBanner} alt="image_banner" className="imgBanner" />
             </div>
 
             <div className="contain_section">
