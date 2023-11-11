@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'next/image';
 import imgBanner from "@/public/assets/science-education-concepts-banner-vector.jpg";
 import "./globals.css";
 import CardStore from "../components/CardsStore";
@@ -16,7 +17,7 @@ function HomePage() {
 
             <div className="contain_section">
                 <div className="title_section store">
-                    <Img src={imgBanner} alt={""} className="title_logo"/>
+                    <Image src={imgBanner} alt={""} className="title_logo"/>
                     <div className="title_store">
                         <h3 className="text_title">STORE</h3>
                     </div>
