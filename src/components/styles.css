@@ -1,52 +1,335 @@
-.nav__container{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap');
+
+.nav{
+  background-color: #203880;
+  padding-top: 1.5vh;
+  padding-bottom: 1vh;
+  padding-left: 2vw;
+  display: flex;
+  justify-content: left;
+}
+
+.nav-logo{
+  padding-top: 2vh;
+  height: 8vh;
+  width: 11.7vw;
+}
+
+.nav-links ul{
+  /* margin-top: 1.7vh; */
+  list-style: none;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+}
+
+.login-button{
+  color: white;
+  background: #2E3898;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.register-button{
+  color: #2E3898;
+  background: #F0F0F0;
+  border: 2px solid #F0F0F0;
+  border-radius: 5px;
+}
+
+.auth-nav-section{
+  margin-top: 2.5vh;
+  width: 40vw;
+  display: flex;
+  justify-content: right;
+}
+
+.auth-nav-section button{
+  margin-left: 1.5vw;
+  height: 6.2vh;
+  width: 9vw;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.auth-nav-section span{
+  margin-top: 1.2vh;
+  margin-right: 1vw;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.auth-nav-section .line-up{
+  height: 4.6vh;
+}
+
+.main-section-banner {
+  border-top: 6px solid white;
+  padding-top: 4vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 8vh;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.58);
+}
+
+.msb-head {
+    display: flex;
+    justify-content: left;
+}
+
+.msb-logo {
+    width: 14vw;
+    height: 10vh;
+}
+
+.line-up {
+    width: 0.17vw;
+    border-radius: 5px;
+    height: 7vh;
+    background: white;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+.msb-title-section {
+    margin-left: 1.5vw;
+    margin-top: 1.2vh;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+}
+
+.msb-body {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-msb-body {
+    margin-top: 1vh;
+    width: 55vw;
+    height: 51vh;
+}
+
+.content-msb-body {
+    /* margin-right: 2vw; */
+    margin-left: 2vw;
+    color: white;
+}
+
+.content-msb-body h2 {
+    width: 40vw;
+    font-size: 1.8rem;
+}
+
+.content-msb-body p {
+    font-size: 1.2rem;
+    margin-top: 1vh;
+    width: 38vw;
+    line-height: 2.3rem;
+}
+
+.collection-title {
+    color: #191f5a;
+}
+
+.collection-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collection-container {
+    margin-left: 8.785vw;
+    margin-right: 8.785vw;
+    margin-top: 9vh;
+}
+
+/* CAROUSEL CSS - BOOKS*/
+.carousel {
+    background: rgba(255, 255, 255, 0);
+}
+
+.flickity-page-dots {
+    bottom: 0px;
+    display: none;
+}
+
+.carousel-cell {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    min-height: 44vh;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-top: 2vh;
+    counter-increment: gallery-cell;
+}
+
+.flickity-prev-next-button {
+    width: 2.3rem !important;
+    height: 2.3rem !important;
+    background-color: #ffffff !important;
+    filter: drop-shadow(-1px 4px 4px rgba(0, 0, 0, 0.25)) !important;
+}
+
+.flickity-button-icon {
+    fill: #203880 !important;
+}
+
+.book-card {
+    width: 13.177vw;
+    height: 42vh;
+    background: #203880;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.25));
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13.177vw;
+    height: 26vh;
+    background: rgb(255, 255, 255);
+    border-radius: 4px 4px 0 0;
+}
+
+.book-card-image {
+    width: 8.5vw;
+    height: 23vh;
+}
+
+.book-card {
+    color: white;
+}
+
+.book-card .book-info {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.book-card .book-info h4 {
+    font-size: 0.77rem;
+    margin-bottom: 1.5vh;
+    font-weight: 700;
+}
+
+.icon-button {
+    width: 2.1vw;
+    height: 2.1vw;
+    background: #f0f0f0;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button .icon {
+    font-size: 1.3rem;
+    color: #2e3898;
+}
+
+.icon-button .icon .cart {
+    width: 1.5vw !important;
+    height: 1.5vw !important;
+}
+
+.book-info .price h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 1vh;
+}
+
+.book-info .icons-container {
+    display: flex;
+    justify-content: left;
+}
+
+.offersHead {
+    margin-top: 10vh;
+    color: white;
+    background: #203880;
+    height: 13vh;
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offers-content{
+  background: #F0F0F0;
+  padding-top: 7vh;
+  padding-left: 8.785vw;
+  padding-right: 8.785vw;
+  margin-top: 0px;
+}
+
+.book-offer-image {
+    width: 13vw;
+    height: 35vh;
+}
+
+.offer-book-card {
+    width: 38vw;
+    display: flex;
+    justify-content: space-around;
+}
+.nav__container {
     width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
     background-color: #203880;
 }
-.logo{
+.logo {
     margin-left: 26vw;
     width: 14vw;
     height: 10vh;
     color: white;
 }
-.title_form{
+.title_form {
     color: #203880;
     padding-top: 30px;
     text-align: center;
 }
-.input_form{
+.input_form {
     width: 20vw;
     height: 2.5vw;
     font-size: 17px;
     padding: 10px 10px;
     border-radius: 5px;
-    border: 2px solid #B7B7B7;
+    border: 2px solid #b7b7b7;
     background-color: transparent;
 }
-.password__container{
+.password__container {
     display: flex;
     position: relative;
     align-items: center;
 }
-.imagen_password{
+.imagen_password {
     position: absolute;
     right: 10px;
 
     width: 1.5vw;
     height: 3vh;
 }
-.input_form:focus{
+.input_form:focus {
     outline: none;
     border: 2px solid #203880;
 }
-.inputForm__container{
+.inputForm__container {
     margin-top: 25px;
     display: flex;
     justify-content: center;
 }
-.button_form{
+.button_form {
     width: 21vw;
     height: 4vw;
     font-size: 20px;
@@ -58,11 +341,11 @@
     font-weight: bold;
     margin: 1vh;
 }
-.button__container{
+.button__container {
     display: flex;
     justify-content: center;
 }
-.button_transparent{
+.button_transparent {
     width: 21vw;
     height: 4vw;
     font-size: 20px;
@@ -70,39 +353,39 @@
     border-radius: 5px;
     background-color: transparent;
     border: 3px solid #203880;
-    color: #3B61D1;
+    color: #3b61d1;
     font-weight: bold;
 }
-.inputFormLogin{
+.inputFormLogin {
     margin-top: 6vh;
 }
-.text_cuenta{
-    color: #3B61D1;
+.text_cuenta {
+    color: #3b61d1;
     margin: 1vh;
 }
-.register__container{
+.register__container {
     display: flex;
     justify-content: center;
 }
-.colum{
+.colum {
     margin: 0 2vw;
 }
-.list_text{
+.list_text {
     color: #676767;
     font-size: 10px;
     margin-right: 2vw;
 }
-.terminos{
+.terminos {
     text-align: center;
     color: #676767;
     font-size: 10px;
 }
-.title_form_register{
+.title_form_register {
     color: #203880;
     padding-top: 3vh;
     text-align: center;
 }
-.banner__container{
+.banner__container {
     width: 100%;
     height: 82vh;
     background-color: #20802A;
@@ -110,41 +393,41 @@
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 0px 10px 10px;
 }
-.titles_banner{
+.titles_banner {
     display: flex;
     align-items: center;
 }
-.line_banner{
+.line_banner {
     background-color: #ffffff;
     width: 0.3vw;
     height: 8vh;
     border-radius: 3px;
 }
-.title_banner{
+.title_banner {
     padding: 10px 35px;
     font-weight: bold;
 }
-.img_logo{
+.img_logo {
     padding: 10px 10px 0px 26px;
 }
-.img_banner{
+.img_banner {
     margin-left: 40px;
 }
-.part_down{
+.part_down {
     margin-top: 25px;
     display: flex;
 }
-.texts_banner{
+.texts_banner {
     width: 25vw;
 }
-.texts_banner{
+.texts_banner {
     margin-left: 3vw;
 }
-.text_banner_content{
+.text_banner_content {
     font-size: 1.5rem;
     line-height: 32px;
 }
-.title_banner_question{
+.title_banner_question {
     padding: 0;
     margin: 0;
 }
@@ -186,6 +469,7 @@
     margin: 0 auto;
     font-size: 0.8rem;
 }
+
 .subtitle_vermas_blog{
     color: #144729;
 }
@@ -194,4 +478,38 @@
     font-size: 1.3rem;
     line-height: 5vh;
     margin-bottom: 4vh;
+}
+
+.offer-book-card{
+  width: 38vw;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.library-content{
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.library-content Img{
+  width: 13vw;
+  height: 35vh;
+}
+
+.library .offers-content{
+  padding-bottom: 6vh;
+  margin-bottom: 5vh;
+}
+
+footer{
+  background: #203880;
+  padding-left: 10vw;
+  color: white;
+}
+
+.eduplanet-logo-footer{
+  width: 14vw;
+  height: 10vh;
 }
