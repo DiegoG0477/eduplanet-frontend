@@ -16,9 +16,10 @@ export default function Nav() {
             </div>
 
             <div className="auth-nav-section">
-                <button>Iniciar Sesión</button>
-                <button>Registrarse</button>
-                
+                <span className="material-symbols-outlined">search</span>
+                <div className="line-up"></div>
+                <button className="login-button">Iniciar Sesión</button>
+                <button className="register-button">Registrarse</button>
             </div>
         </div>
     );

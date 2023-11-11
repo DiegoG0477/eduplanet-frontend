@@ -2,21 +2,21 @@
 
 .nav{
   background-color: #203880;
-  padding-top: 2vh;
+  padding-top: 1.5vh;
   padding-bottom: 1vh;
   padding-left: 2vw;
   display: flex;
   justify-content: left;
-
 }
 
 .nav-logo{
+  padding-top: 2vh;
   height: 8vh;
   width: 11.7vw;
 }
 
 .nav-links ul{
-  margin-top: 1.7vh;
+  /* margin-top: 1.7vh; */
   list-style: none;
   font-size: 22px;
   color: white;
@@ -25,21 +25,47 @@
   width: 40vw;
 }
 
+.login-button{
+  color: white;
+  background: #2E3898;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.register-button{
+  color: #2E3898;
+  background: #F0F0F0;
+  border: 2px solid #F0F0F0;
+  border-radius: 5px;
+}
+
 .auth-nav-section{
-  margin-top: 1vh;
+  margin-top: 2.5vh;
   width: 40vw;
   display: flex;
   justify-content: right;
 }
 
 .auth-nav-section button{
-  margin-left: 2vw;
-  height: 7vh;
+  margin-left: 1.5vw;
+  height: 6.2vh;
   width: 9vw;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.auth-nav-section span{
+  margin-top: 1.2vh;
+  margin-right: 1vw;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.auth-nav-section .line-up{
+  height: 4.6vh;
 }
 
 .main-section-banner {
-  /* width: 100%; */
   border-top: 6px solid white;
   padding-top: 4vh;
   padding-left: 2vw;
@@ -237,7 +263,7 @@
   justify-content: center;
 }
 
-.offersContent{
+.offers-content{
   background: #F0F0F0;
   padding-top: 7vh;
   padding-left: 8.785vw;
@@ -254,4 +280,32 @@
   width: 38vw;
   display: flex;
   justify-content: space-around;
+  
+}
+
+.library-content{
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.library-content Img{
+  width: 13vw;
+  height: 35vh;
+}
+
+.library .offers-content{
+  padding-bottom: 6vh;
+  margin-bottom: 5vh;
+}
+
+footer{
+  background: #203880;
+  padding-left: 10vw;
+  color: white;
+}
+
+.eduplanet-logo-footer{
+  width: 14vw;
+  height: 10vh;
 }

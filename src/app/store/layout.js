@@ -2,17 +2,23 @@
 import Nav from "@/components/organisms/Nav";
 import "../globals.css";
 import Script from "next/script";
+import Footer from "@/components/organisms/Footer";
 
 function StoreLayout({ children }) {
-  return (
-    <>
-      <body>
-        <Nav/>
-        {children}
-        <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" />
-      </body>
-    </>
-  );
+    return (
+        <>
+            <body>
+                <Nav />
+                {children}
+                <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" />
+                <Script
+                    src="https://kit.fontawesome.com/e020340de0.js"
+                    crossorigin="anonymous"
+                />
+                <Footer />
+            </body>
+        </>
+    );
 }
 
 export default StoreLayout;
