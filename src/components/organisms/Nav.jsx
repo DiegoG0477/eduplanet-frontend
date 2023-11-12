@@ -1,6 +1,6 @@
 import eduplanetLogo from "@/public/assets/logo-png-w.png";
 import Img from "next/image";
-
+import "../styles.css"
 export default function Nav() {
     return (
         <div className="nav">
