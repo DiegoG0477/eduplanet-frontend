@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'next/image';
+import Image from 'next/image';
 import imgBanner from "@/public/assets/science-education-concepts-banner-vector.jpg";
 import "./globals.css";
 import CardStore from "../components/CardsStore";
