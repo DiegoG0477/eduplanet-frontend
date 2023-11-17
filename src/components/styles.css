@@ -539,3 +539,29 @@ footer{
     width: 100%;
     height: 100%;
 }
+.button_upload__container{
+    position: relative;
+    padding: 5px;
+    width: 2vw;
+    height: 1.5vw;
+    background-color: #F2AE2F;
+    border-radius: 2px;
+}
+.box_icon_upload_again{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.img_upload_again{
+    width: 1.5vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+}

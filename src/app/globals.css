@@ -337,6 +337,19 @@ background-color: #203880
   top:30%;
   font-weight: bold;
 }
+.input_blog_add_image_ready{
+  margin-top: 3vh;
+  height: 45vh;
+  border-radius: 6px;
+  position: relative;
+  border: 5px dashed grey;
+}
+
+.img_agregada{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 .img_agregar_icon{
   width: 5vw;
   height: 10vh;
@@ -348,4 +361,13 @@ background-color: #203880
   margin-top: 7vh;
   display: flex;
   justify-content: space-between;
+}
+.upload_again_button{
+  position: absolute;
+  z-index: 3;
+  top: 0.5vw;
+  left: 0.5vw;
+}
+.button_add_blog{
+  margin-top: 2vw;
 }

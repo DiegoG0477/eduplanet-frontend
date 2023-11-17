@@ -1,14 +1,9 @@
-import TextAreaInput from "@/components/TextAreaInput"
-import ChooseImg from "@/components/chooseImg"
-
+import FormAddBlog from "@/components/FormAddBlog"
 function addBlogPage() {
+
   return (
     <div className='body_blog'>
-      <input placeholder="Agregar titulo" className='input_blog_add'/>
-      <ChooseImg/>
-      <div className="textarea_blog_page">
-        <TextAreaInput holder="Escribe Articulo..."/>
-      </div>
+      <FormAddBlog/>
       </div>
   )
 }
