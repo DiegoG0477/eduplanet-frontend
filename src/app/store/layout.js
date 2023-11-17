@@ -4,6 +4,8 @@ import "../globals.css";
 import Script from "next/script";
 import Footer from "@/components/organisms/Footer";
 
+import "@/components/styles.css";
+
 function StoreLayout({ children }) {
     return (
         <>

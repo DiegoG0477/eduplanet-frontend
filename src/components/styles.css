@@ -582,3 +582,16 @@ footer {
     width: 70vw;
     text-align: center;
 }
+
+.book-shopping-image{
+    height: 58vh;
+    width: 21vw;
+}
+
+.book-shopping-body{
+    /* background-color: #191f5a; */
+    margin-left: 9.5vw;
+    margin-right: 9.5vw;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+}

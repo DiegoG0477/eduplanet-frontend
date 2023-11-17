@@ -7,7 +7,6 @@ export const metadata = {
     title: "Eduplanet",
     description: "Educación para todos",
 };
-import './globals.css'
 
 export default function RootLayout({ children }) {
     return (
