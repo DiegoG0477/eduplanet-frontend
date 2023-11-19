@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap");
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
 
 .nav {
     background-color: #203880;
@@ -23,6 +28,11 @@
     display: flex;
     justify-content: space-around;
     width: 40vw;
+}
+
+.nav-links a li {
+    text-decoration: none;
+    color: white;
 }
 
 .login-button {

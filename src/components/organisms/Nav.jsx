@@ -1,5 +1,6 @@
 import eduplanetLogo from "@/public/assets/logo-png-w.png";
 import Img from "next/image";
+import Link from "next/link";
 
 export default function Nav() {
     return (
@@ -7,19 +8,20 @@ export default function Nav() {
             <Img src={eduplanetLogo} className="nav-logo" />
             <div className="nav-links">
                 <ul>
-                    <li>Blog</li>
-                    <li>Store</li>
-                    <li>Multimedia</li>
-                    <li>Descuentos</li>
-                    <li>Cursos</li>
+                    <Link href="/blogs"><li>Blog</li></Link>
+                    <Link href="/store"><li>Store</li></Link>
+                    <Link href="/multimedia"><li>Multimedia</li></Link>
+                    <Link href="/store"><li>Descuentos</li></Link>
+                    <Link href="/multimedia"><li>Cursos</li></Link>
                 </ul>
             </div>
 
             <div className="auth-nav-section">
                 <span className="material-symbols-outlined">search</span>
                 <div className="line-up"></div>
-                <button className="login-button">Iniciar Sesión</button>
-                <button className="register-button">Registrarse</button>
+                <Link href="/login"><button className="login-button">Iniciar Sesión</button></Link>
+                <Link href="/register"><button className="register-button">Registrarse</button></Link>
+                
             </div>
         </div>
     );
