@@ -465,7 +465,7 @@ body{
     align-items: center;
     width: 20vw;
     height: 3vh;
-    background-color: #20802a;
+    background-color: #144729;
     border-radius: 5px;
 }
 .datos_blog_text {
@@ -480,10 +480,21 @@ body{
     font-size: 0.8rem;
 }
 
-.offer-book-card {
-    width: 38vw;
-    display: flex;
-    justify-content: space-around;
+.subtitle_vermas_blog{
+    color: #144729;
+}
+.text_vermas_blog{
+    margin-top: 4vh;
+    font-size: 1.3rem;
+    line-height: 5vh;
+    margin-bottom: 4vh;
+}
+
+.offer-book-card{
+  width: 38vw;
+  display: flex;
+  justify-content: space-around;
+  
 }
 
 .library-content {
@@ -710,4 +721,63 @@ footer {
     font-size: 1.8rem;
     color: #3A613A;
     margin-top: 0.5vh;
+}
+
+.textarea_input{
+    margin-top: 6vh;
+    width: 95%;
+    height: 20vw;
+    border: 2px solid #235F3B;
+    padding: 30px;
+}
+.cardadmin__container{
+    width: 22vw;
+    height: 25vw;
+    background-color: #F0F0F0;
+    box-shadow: 0px 7px 5px 5px rgba(0,0,0,0.25);
+}
+
+.cardadmin__container h2{
+    padding-left: 2vw;
+    color: #2E3898;
+}
+
+.img_admin__container{
+    width: 100%;
+    height: 15vw;
+    background-color: blue;
+}
+
+.img_card_admin{
+    width: 100%;
+    height: 100%;
+}
+
+.button_upload__container{
+    position: relative;
+    padding: 5px;
+    width: 2vw;
+    height: 1.5vw;
+    background-color: #F2AE2F;
+    border-radius: 2px;
+}
+
+.box_icon_upload_again{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.img_upload_again{
+    width: 1.5vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
 }

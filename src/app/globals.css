@@ -38,7 +38,15 @@ body {
     width: 20vw;
     border-bottom: 3px solid #144729;
 }
-.body_blog {
+.title_admin_page{
+  margin-top: 6vh;
+  color: #191F5A;
+  height: 8vh;
+  font-size: 2.5rem;
+  width: 20vw;
+  border-bottom:3px solid #144729;
+}
+.body_blog{
     margin: 0 auto;
     width: 80vw;
 }
@@ -74,6 +82,16 @@ body {
 .recient_blog__container {
     display: flex;
     justify-content: space-between;
+}
+.title_vermas{
+    text-align: center;
+    color: #144729;
+    margin: 6vh 0;
+    font-size: 2.8rem;
+}
+.img_blog_vermas{
+    width: 100%;
+    height: 55vh;
     text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.55);
 }
 body,
@@ -270,8 +288,78 @@ html {
     overflow: hidden;
 }
 
-.img_carrusel {
-    width: 450px;
-    height: auto;
-    margin: 40px;
+.img_carrusel{
+  width: 450px;
+  height: auto;
+  margin: 40px;
+}
+.input_blog_add{
+  margin-top: 10vh;
+  width: 100%;
+  height: 7vh;
+  border-radius: 7px;
+  border: solid 2px #235F3B;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #235F3B;
+}
+.input_blog_add_image input{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+  background-color: red;
+  opacity: 0;
+}
+.input_blog_add_image{
+  margin-top: 3vh;
+  height: 45vh;
+  border-radius: 6px;
+  border: 5px dashed grey;
+  position: relative;
+}
+.input_blog_add_image p{
+  font-size: 2rem;
+  color: #838383;
+  text-align: center;
+  position: relative;
+  top:30%;
+  font-weight: bold;
+}
+.input_blog_add_image_ready{
+  margin-top: 3vh;
+  height: 45vh;
+  border-radius: 6px;
+  position: relative;
+  border: 5px dashed grey;
+}
+
+.img_agregada{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.img_agregar_icon{
+  width: 5vw;
+  height: 10vh;
+  position: relative;
+  top: 35%;
+  left: 46%;
+}
+.card_admin__container{
+  margin-top: 7vh;
+  display: flex;
+  justify-content: space-between;
+}
+.upload_again_button{
+  position: absolute;
+  z-index: 3;
+  top: 0.5vw;
+  left: 0.5vw;
+}
+.button_add_blog{
+  margin-top: 2vw;
 }
