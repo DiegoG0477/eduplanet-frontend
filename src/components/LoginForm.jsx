@@ -15,10 +15,10 @@ function LoginForm() {
     console.log(email, password);
     try {
       axios.defaults.withCredentials = true;
-      const response = await axios.get(`http://localhost:3001/v1/auth/login/${email}/${password}`);
+      const response = await axios.post(`http://localhost:3001/v1/auth/login/${email}/${password}`);
       console.log(email + " " + password)
       console.log(response);
-      router.push('/store');
+      router.push('/');
     }
     catch (error) {
       console.log(error);

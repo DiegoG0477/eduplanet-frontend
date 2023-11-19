@@ -21,8 +21,8 @@ function RegisterForm() {
         email:email,
         password:password,
         nombre:nombre,
-        apellido_pat:apellido, 
-        apellido_mat:apellido
+        apellidoPat:apellido, 
+        apellidoMat:apellido
       });
 
       console.log(response);

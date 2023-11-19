@@ -584,14 +584,120 @@ footer {
 }
 
 .book-shopping-image{
-    height: 58vh;
-    width: 21vw;
+    height: 64vh;
+    width: 25vw;
 }
 
 .book-shopping-body{
-    /* background-color: #191f5a; */
+    display: flex;
+    justify-content: left;
     margin-left: 9.5vw;
     margin-right: 9.5vw;
     margin-top: 7vh;
     margin-bottom: 7vh;
+}
+
+.book-shopping-data{
+    margin-left: 3vw;
+}
+
+.book-shopping-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.book-shopping-price{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.book-shopping-features{
+    display: flex;
+    justify-content: left;
+}
+
+.feature{
+    display: flex;
+    justify-content: left;
+    margin-top: 1vh;
+}
+
+.feature .feature-icon{
+    font-size: 1.5rem;
+    color: #2E3898;
+    margin-top: 0;
+}
+
+.feature p{
+    font-size: 1.1rem;
+    margin-left: 1vw;
+    margin-top: 0;
+}
+
+.shopping-button{
+    width: 13.2vw;
+    height: 6.5vh;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5vh;
+}
+
+.shopping-button .button-body{
+    display: flex;
+}
+
+.shopping-button p{
+    margin-left: 1vw;
+}
+
+.shopping-button span{
+    margin-top: 0;
+}
+
+.shopping-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.book-description-container{
+    margin-left: 9.5vw;
+    margin-right: 9.5vw;
+    margin-bottom: 7vh;
+}
+
+.book-description-container h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.book-description{
+    font-size: 1.1rem;
+    margin-top: 1vh;
+    line-height: 2rem;
+}
+
+.purchased-price-status{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.purchased-price-status h4{
+    font-size: 1.4rem;
+    margin-top: 0.5vh;
+    margin-left: 1vw;
+}
+
+.purchased-price-status span{
+    font-size: 1.8rem;
+    color: #3A613A;
+    margin-top: 0.5vh;
 }
