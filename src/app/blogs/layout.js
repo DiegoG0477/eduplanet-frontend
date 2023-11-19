@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import Nav from "@/components/organisms/Nav";
 import "../globals.css";
@@ -23,18 +22,3 @@ function BlogSectionLayout({ children }) {
 }
 
 export default BlogSectionLayout;
-=======
-import Nav from "@/components/organisms/Nav"
-function StoreLayout({ children }) {
-  return (
-    <>
-      <body>
-        { <Nav/> }
-        {children}
-      </body>
-    </>
-  );
-}
-
-export default StoreLayout;
->>>>>>> feature-d
