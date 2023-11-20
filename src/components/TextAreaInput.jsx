@@ -1,7 +1,7 @@
 import "./styles.css"
 function TextAreaInput(props) {
   return (
-    <textarea placeholder={props.holder} className="textarea_input" onChange={props.fun} name={props.name}/>
+    <textarea style={props.style} placeholder={props.holder} className="textarea_input" onChange={props.fun} name={props.name}/>
   )
 }
 

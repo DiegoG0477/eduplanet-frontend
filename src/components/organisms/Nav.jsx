@@ -3,13 +3,17 @@ import Img from "next/image";
 import Link from "next/link";
 
 export default function Nav() {
+    const goStore = () => {
+        window.location.href = "/store";
+    }
+
     return (
         <div className="nav">
             <Img src={eduplanetLogo} className="nav-logo" />
             <div className="nav-links">
                 <ul>
                     <Link href="/blogs"><li>Blog</li></Link>
-                    <Link href="/store"><li>Store</li></Link>
+                    <Link href="/store" onClick={goStore} ><li>Store</li></Link>
                     <Link href="/multimedia"><li>Multimedia</li></Link>
                     <Link href="/store"><li>Descuentos</li></Link>
                     <Link href="/multimedia"><li>Cursos</li></Link>

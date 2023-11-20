@@ -8,7 +8,15 @@ import BooksLibrary from "@/components/organisms/BooksLibrary";
 export default function Store() {
     return (
         <>
-            <MainSectionBanner acentColor="#203880" bannerImage={BannerImage}/>
+            <MainSectionBanner
+                acentColor="#203880"
+                bannerImage={BannerImage}
+                sectionName={"STORE"}
+                sectionBannerQuestion={
+                    "¿Te gustaría adquirir recursos de calidad para mejorar tu educación o la de tus alumnos?"
+                }
+                sectionDescription={`En la tienda online de Eduplanet podrás acceder a libros educativos, ediciones mejoradas, revisadas y actualizadas, mapas, guías para maestros, y  estudiantes de docencia. Todo, en formato digital y al mejor precio.`}
+            />
 
             <BooksCollection collectionTitle="Lo más vendido" />
 

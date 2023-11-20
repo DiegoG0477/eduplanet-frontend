@@ -30,7 +30,6 @@ export default function BookShoppingBody(props) {
                             <Feature spanText={"description"} featureText={"234 Páginas"}/>
                             <Feature spanText={"download"} featureText={"Descarga Digital"}/>
                         </div>
-
                     </div>
 
                     { (props.status == "purchased") ? 

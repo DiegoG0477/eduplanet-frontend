@@ -12,14 +12,14 @@ export default function MainSectionBanner(props) {
       <div className="msb-head">
         <Img className="msb-logo" src={eduplanetLogo} alt="eduplanet-logo" />
         <div className="line-up"></div>
-        <h2 className="msb-title-section">STORE</h2>
+        <h2 className="msb-title-section">{props.sectionName}</h2>
       </div>
 
       <div className="msb-body">
         <Img src={props.bannerImage} className="img-msb-body"/>
         <div className="content-msb-body">
-            <h2>¿Te gustaría adquirir recursos de calidad para mejorar tu educación o la de tus alumnos?</h2>
-            <p>En la tienda online de Eduplanet podrás acceder a libros educativos, ediciones mejoradas, revisadas y actualizadas, mapas, guías para maestros, y  estudiantes de docencia. Todo, en formato digital y al mejor precio.</p>
+            <h2>{props.sectionBannerQuestion}</h2>
+            <p>{props.sectionDescription}</p>
         </div>
       </div>
     </div>

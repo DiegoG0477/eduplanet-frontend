@@ -4,7 +4,6 @@ import imgBanner from "@/public/assets/science-education-concepts-banner-vector.
 import "./globals.css";
 import CardStore from "../components/CardsStore";
 import CardBlogMain from "@/components/CardBlogMain";
-import Img from "next/image";
 
 function HomePage() {
     return (

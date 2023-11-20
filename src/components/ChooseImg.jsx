@@ -4,7 +4,7 @@ import agregar from "@/public/assets/boton-agregar.png"
 import { useState } from "react"
 import ButtonUploadAgainImg from "./ButtonUploadAgainImg"
 function ChooseImg(props) {
-  const [file,setFile] = useState(null)
+  const [file,setFile] = useState(null);
   console.log(file)
   return (
     <div>

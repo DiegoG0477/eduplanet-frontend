@@ -5,12 +5,13 @@ import "./styles.css"
 import { useState } from "react"
 import axios from "axios"
 import ButtonForm from "./ButtonForm"
+
 function FormAddBlog() {
     const [blog, setBlog] = useState({
         titulo:"",
         texto:""
     })
-    const [imagen, setImagen]= useState(null)
+    const [imagen, setImagen] = useState(null);
     const handleChange = (e)=>{
         e.preventDefault()
         setBlog({
@@ -24,7 +25,7 @@ function FormAddBlog() {
         form.append("titulo", blog.titulo)
         form.append("imagen",imagen)
         form.append("contenido",blog.texto)
-        await axios.post("http://localhost:80/api/v1/blog",form,{ headers:{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAwMTQ4MTE0LCJleHAiOjE3MDAyMzQ1MTR9.4yXcNNjCQ6OiWM5LFbbSwDlvrQ3XLYEACtj7FekOUfw"} })
+        await axios.post("http://localhost:3001/api/v1/blog",form,)
         alert("se agrego el blog correctamente")
     }
   return (
