@@ -1,7 +1,7 @@
 import eduplanetLogo from "@/public/assets/logo-png-w.png";
 import Link from "next/link";
 import Img from "next/image";
-
+import "../styles.css"
 export default function Footer() {
     return (
         <footer>

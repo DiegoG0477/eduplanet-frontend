@@ -9,7 +9,17 @@ function ChooseImg(props) {
   return (
     <div>
       {file == null?(
-        <div className="input_blog_add_image">
+        props.id == 1 ?(
+              <div className="input_blog_add_video">
+            <Img src={agregar} alt="agregar" className="video_agregar_icon"/>
+            <p>Agregar miniatura</p>
+            <input type="file" name={props.name} onChange={ (e)=>{
+              props.fun(e.target.files[0])
+              setFile(e.target.files[0])
+            }}/>
+            </div>
+        ):(
+          <div className="input_blog_add_image">
         <Img src={agregar} alt="agregar" className="img_agregar_icon"/>
         <p>Agregar imagen</p>
         <input type="file" name={props.name} onChange={ (e)=>{
@@ -17,13 +27,23 @@ function ChooseImg(props) {
           setFile(e.target.files[0])
         }}/>
       </div>
+        )
       ):(
-        <div className="input_blog_add_image_ready">
-        <div className="upload_again_button">
-        <ButtonUploadAgainImg fun={props.fun} guardarFile={setFile}/>
-        </div>
-        <Img src={URL.createObjectURL(file)} alt="agregar" width={300} height={100} className="img_agregada"/>
-        </div>
+        props.id == 1 ?(
+              <div className="input_blog_add_video_ready">
+            <div className="upload_again_button">
+            <ButtonUploadAgainImg fun={props.fun} guardarFile={setFile}/>
+            </div>
+            <Img src={URL.createObjectURL(file)} alt="agregar" width={300} height={100} className="img_agregada"/>
+            </div>
+        ):(
+            <div className="input_blog_add_image_ready">
+          <div className="upload_again_button">
+          <ButtonUploadAgainImg fun={props.fun} guardarFile={setFile}/>
+          </div>
+          <Img src={URL.createObjectURL(file)} alt="agregar" width={300} height={100} className="img_agregada"/>
+          </div>
+        )
       )}
     </div>
   )

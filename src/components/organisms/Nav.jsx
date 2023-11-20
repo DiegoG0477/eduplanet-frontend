@@ -1,7 +1,7 @@
 import eduplanetLogo from "@/public/assets/logo-png-w.png";
 import Img from "next/image";
 import Link from "next/link";
-
+import "../styles.css"
 export default function Nav() {
     const goStore = () => {
         window.location.href = "/store";
