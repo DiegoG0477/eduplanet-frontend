@@ -2,7 +2,7 @@ import Img from "next/image";
 import imagen from "@/public/assets/card-example.jpg";
 import MainSectionBanner from "@/components/MainSectionBanner";
 import BannerImage from "@/public/assets/banner-blog.jpg";
-import CardBlog from "@/components/CardBlog";
+import CardBlogs from "@/components/CardsBlogs";
 
 function blogPage() {
     return (
@@ -29,28 +29,7 @@ function blogPage() {
                         escuelas
                     </h1>
                 </div>
-
-                <div>
-                    <h1 className="titulo_blog_page">
-                        Los Artículos Más Recientes
-                    </h1>
-
-                    <div className="recient_blog__container">
-                        <CardBlog />
-                        <CardBlog />
-                        <CardBlog />
-                    </div>
-
-                    <h1 className="titulo_blog_page">Selección del Editor</h1>
-
-                    <div className="recient_blog__container">
-                        <CardBlog />
-                        <CardBlog />
-                        <CardBlog />
-                    </div>
-
-
-                </div>
+                <CardBlogs/>
             </div>
         </div>
     );

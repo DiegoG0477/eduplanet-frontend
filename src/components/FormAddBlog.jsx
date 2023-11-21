@@ -25,7 +25,7 @@ function FormAddBlog() {
         form.append("titulo", blog.titulo)
         form.append("imagen",imagen)
         form.append("contenido",blog.texto)
-        await axios.post("http://localhost:3001/api/v1/blog",form,)
+        await axios.post("http://localhost:80/v1/blogs",form, {withCredentials: true})
         alert("se agrego el blog correctamente")
     }
   return (
