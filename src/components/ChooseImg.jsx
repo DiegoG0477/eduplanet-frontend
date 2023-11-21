@@ -5,14 +5,13 @@ import { useState } from "react"
 import ButtonUploadAgainImg from "./ButtonUploadAgainImg"
 function ChooseImg(props) {
   const [file,setFile] = useState(null);
-  console.log(file)
   return (
     <div>
       {file == null?(
         props.id == 1 ?(
               <div className="input_blog_add_video">
             <Img src={agregar} alt="agregar" className="video_agregar_icon"/>
-            <p>Agregar miniatura</p>
+            <p>{props.nombre}</p>
             <input type="file" name={props.name} onChange={ (e)=>{
               props.fun(e.target.files[0])
               setFile(e.target.files[0])
