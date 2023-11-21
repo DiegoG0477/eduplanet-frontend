@@ -75,7 +75,7 @@ function FormAddVideo() {
             <ChooseImg id={1} fun={setImagen} name="imagen" nombre={tipo.portada}/>
             <div className="inputs_right_container">
                 <select name="idTipoVideo" className="select_input" onChange={handleChange}>
-                    <option value={1} selected>Video</option>
+                    <option value={1} >Video</option>
                     <option value={2}>Lista de Reproduccion</option>
                 </select>
                 <input type="text" name="titulo" placeholder={tipo.placeHolder} className="input_title" onChange={handleChange}/>

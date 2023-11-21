@@ -1,5 +1,5 @@
 import Img from "next/image";
-import "@/components/Styles.css";
+import "@/components/styles.css";
 
 
 export default function JobCard(props) {

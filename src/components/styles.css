@@ -982,3 +982,101 @@ footer {
     margin-top: 4vw;
     margin-bottom: 0;
 }
+
+/* --------- DARIO ------------ */
+
+.store_card {
+    text-align: center;
+    position: relative;
+    margin: 30px;
+    width: 270px;
+    height: 360px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card_store_footer {
+    background-color: #203880;
+    padding: 10px;
+    color: white;
+}
+
+.imagen_card_store {
+    margin-top: 30px;
+    width: 200px;
+    height: auto;
+}
+
+.contain_precio {
+    display: flex;
+    align-items: center;
+    width: 240px;
+}
+
+.store_precio {
+    text-align: right;
+    margin-left: auto;
+}
+
+.info {
+    padding: 2px;
+    border-radius: 3px;
+    background-color: white;
+    color: #203880;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.blogs_card{
+    text-align: center;
+    position: relative;
+    background-color: white;
+    width: 450px;
+    height: 430px;
+    margin: 10px;
+
+}
+
+.blog_imagen{
+    height: 200px;
+    overflow: hidden;
+
+}
+.imagen_card_blog{
+    width: 100%;
+    height: auto;
+
+}
+
+.card_blog_footer{
+    margin: 20px;
+    width: auto;
+    text-align: left;
+}
+
+.blog_titulo{
+    font-size: 16px;
+    color: #237C47;
+}
+
+.blog_detalles{
+    color: white;
+    height: 20px;
+    background-color: #20802A;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.detalles_text{
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.descripcion_text{
+    font-size: 14px;
+    font-weight: 300;
+}
