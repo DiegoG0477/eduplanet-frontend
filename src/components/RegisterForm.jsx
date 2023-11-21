@@ -17,7 +17,7 @@ function RegisterForm() {
     console.log(email, password);
     try {
       axios.defaults.withCredentials = true;
-      const response = await axios.post(`http://localhost:3001/v1/auth/signup`, {
+      const response = await axios.post(`http://localhost:80/v1/auth/signup`, {
         email:email,
         password:password,
         nombre:nombre,
