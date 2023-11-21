@@ -1,0 +1,100 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import GenericCard from "./GenericCard";
+
+export default function ViewAll(props) {
+    const [data, setData] = useState([]);
+    const [route, setRoute] = useState("");
+
+    useEffect(() => {
+        if (props.type === "multimedia") {
+            setRoute("/multimedia/");
+        } else if (props.type === "blog") {
+            setRoute("/blogs/");
+        } else if (props.type === "book") {
+            setRoute("/store/book/");
+        }
+    }, [props.type]);
+
+    const totalCards = data.length; // Total de tarjetas
+    const cardsPerGroup = 6; // Cantidad de tarjetas por grupo
+    const [currentGroup, setCurrentGroup] = useState(1);
+    const previousGroup = currentGroup - 1;
+    const nextGroup = currentGroup + 1;
+    const startCard = (currentGroup - 1) * cardsPerGroup;
+    const endCard = currentGroup * cardsPerGroup;
+
+    const cardsToShow = data.map((item, index) => {
+        if (index >= startCard && index < endCard) {
+            return (
+                <GenericCard
+                    key={index}
+                    title={item.title}
+                    description={item.description}
+                    image={item.image}
+                    route={`${route}${item.id}`}
+                />
+            );
+        }
+        return null;
+    });
+
+    const handleNextGroup = () => {
+        if (currentGroup < Math.ceil(totalCards / cardsPerGroup)) {
+            setCurrentGroup(currentGroup + 1);
+        }
+    };
+
+    const handlePreviousGroup = () => {
+        if (currentGroup > 1) {
+            setCurrentGroup(currentGroup - 1);
+        }
+    };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [currentGroup]);
+
+    return (
+        <div>
+            <div className="contain_search">{cardsToShow}</div>
+            <div className="contain_navigate">
+                <button
+                    className="button_navigate"
+                    onClick={handlePreviousGroup}
+                    disabled={currentGroup === 1}
+                >
+                    Anterior
+                </button>
+                <div className="page-counter">
+                    <span className={previousGroup > 0 ? "page-number" : ""}>
+                        {previousGroup > 0 ? previousGroup : ""}
+                    </span>
+                    <span className={`page-number current-page`}>
+                        {currentGroup}
+                    </span>
+                    <span
+                        className={
+                            nextGroup <= Math.ceil(totalCards / cardsPerGroup)
+                                ? "page-number"
+                                : ""
+                        }
+                    >
+                        {nextGroup <= Math.ceil(totalCards / cardsPerGroup)
+                            ? nextGroup
+                            : ""}
+                    </span>
+                </div>
+                <button
+                    className="button_navigate"
+                    onClick={handleNextGroup}
+                    disabled={
+                        currentGroup === Math.ceil(totalCards / cardsPerGroup)
+                    }
+                >
+                    Siguiente
+                </button>
+            </div>
+        </div>
+    );
+}

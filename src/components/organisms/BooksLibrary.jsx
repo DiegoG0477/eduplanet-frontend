@@ -8,7 +8,7 @@ export default function BooksLibrary() {
             <div className="offers-content" style={{ marginTop: "5vh" }}>
                 <div className="collection-head">
                     <h2 className="collection-title">Biblioteca Completa</h2>
-                    <Link href="/store">
+                    <Link href="/store/all">
                         <h2 className="collection-title">
                             Explorar{" "}
                             <span className="material-symbols-outlined">

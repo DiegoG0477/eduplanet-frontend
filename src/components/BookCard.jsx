@@ -1,8 +1,6 @@
 import Img from "next/image";
 import BookReference from "@/public/assets/book-reference.png";
 import BookCardButton from "./atoms/BookCardButton";
-import InfoIcon from "@/public/assets/info-icon.svg";
-import AddShoppingIcon from "@/public/assets/add-shopping-icon.svg";
 
 export default function BookCard(props) {
     return (

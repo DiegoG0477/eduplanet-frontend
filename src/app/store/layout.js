@@ -9,7 +9,6 @@ import "@/components/styles.css";
 function StoreLayout({ children }) {
     return (
         <>
-
                 <Nav />
                 {children}
                 <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" />
@@ -18,7 +17,6 @@ function StoreLayout({ children }) {
                     crossorigin="anonymous"
                 />
                 <Footer />
-
         </>
     );
 }

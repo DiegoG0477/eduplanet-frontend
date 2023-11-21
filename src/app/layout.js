@@ -21,13 +21,14 @@ export default function RootLayout({ children }) {
                     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
                 />
             </head>
-            <body className={inter.className}>{children}
-            <Script
-                src="https://kit.fontawesome.com/e020340de0.js"
-                crossorigin="anonymous"
-            />
+            <body className={inter.className}>
+                {children}
+                <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" />
+                <Script
+                    src="https://kit.fontawesome.com/e020340de0.js"
+                    crossorigin="anonymous"
+                />
             </body>
-            
         </html>
     );
 }

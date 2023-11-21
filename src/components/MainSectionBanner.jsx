@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import eduplanetLogo from "@/public/assets/logo-png-w.png";
+import SectionTitle from "./organisms/SectionTitle";
 import Img from "next/image";
 
 export default function MainSectionBanner(props) {
@@ -9,12 +9,7 @@ export default function MainSectionBanner(props) {
       className="main-section-banner"
       style={{ background: props.acentColor }}
     >
-      <div className="msb-head">
-        <Img className="msb-logo" src={eduplanetLogo} alt="eduplanet-logo" />
-        <div className="line-up"></div>
-        <h2 className="msb-title-section">{props.sectionName}</h2>
-      </div>
-
+      <SectionTitle sectionName={props.sectionName} />
       <div className="msb-body">
         <Img src={props.bannerImage} className="img-msb-body"/>
         <div className="content-msb-body">

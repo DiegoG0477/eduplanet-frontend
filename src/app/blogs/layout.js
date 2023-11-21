@@ -9,7 +9,7 @@ import "@/components/styles.css";
 function BlogSectionLayout({ children }) {
     return (
         <>
-            <Nav />
+            <Nav background={"#20802A"} />
             {children}
             <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" />
             <Script
