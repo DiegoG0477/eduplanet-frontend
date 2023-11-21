@@ -20,13 +20,13 @@ export default function Store() {
 
             <BooksCollection collectionTitle="Lo más vendido" />
 
-            <BooksCollection collectionTitle="Estudiantes de docencia: Guías" />
+            {/* <BooksCollection collectionTitle="Estudiantes de docencia: Guías" /> */}
 
-            <OffersSection discount="20" />
+            {/* <OffersSection discount="20" /> */}
 
             <BooksCollection collectionTitle="Lo mejor para Primaria" />
 
-            <BooksCollection collectionTitle="Colección: Padres de Familia" />
+            {/* <BooksCollection collectionTitle="Colección: Padres de Familia" /> */}
 
             <BooksLibrary />
         </>

@@ -17,7 +17,7 @@ export default function Nav(props) {
     }
 
     return (
-        <div className="nav" style={{background:props.background}}>
+        <div className="nav" >
             <Link href="/">
                 <Img src={eduplanetLogo} className="nav-logo" />
             </Link>

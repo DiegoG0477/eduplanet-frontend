@@ -6,10 +6,10 @@ export default function BookCard(props) {
     return (
         <div className="book-card">
             <div className="image-container">
-                <Img src={BookReference} className="book-card-image" />
+                <Img src={props.image} className="book-card-image" width={100} height={300}/>
             </div>
             <div className="book-info">
-                <h4>La Guia Santillana 1 - Edición Primaria 2022</h4>
+                <h4>{props.title}</h4>
                 <div
                     style={{ display: "flex", justifyContent: "space-between" }}>
                     <div className="icons-container">
