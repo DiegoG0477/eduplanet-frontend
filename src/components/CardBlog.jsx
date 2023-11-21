@@ -1,9 +1,9 @@
 import Img from "next/image";
 import prueba from "@/public/assets/card-example.jpg";
 import DatosCardBlog from "./DatosCardBlog";
-function CardBlog() {
+function CardBlog(props) {
     return (
-        <div className="card_blog__container">
+        <div className="card_blog__container" style={props.style}>
             <Img src={prueba} alt="prueba" className="image_card_blog" />
             
             <div className="card-blog-data">

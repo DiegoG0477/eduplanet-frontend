@@ -3,10 +3,11 @@ import imagen from "@/public/assets/card-example.jpg";
 import MainSectionBanner from "@/components/MainSectionBanner";
 import BannerImage from "@/public/assets/banner-blog.jpg";
 import CardBlog from "@/components/CardBlog";
+import Link from "next/link";
 
 function blogPage() {
     return (
-        <div >
+        <div>
             <MainSectionBanner
                 acentColor="#20802A"
                 bannerImage={BannerImage}
@@ -49,7 +50,17 @@ function blogPage() {
                         <CardBlog />
                     </div>
 
-
+                    <Link href="/blogs/all">
+                        <h1
+                            className="titulo_blog_page"
+                            style={{ color: "#144729" }}
+                        >
+                            TODOS LOS ARTÍCULOS{" "}
+                            <span className="material-symbols-outlined">
+                                arrow_forward_ios
+                            </span>
+                        </h1>
+                    </Link>
                 </div>
             </div>
         </div>

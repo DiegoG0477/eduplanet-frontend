@@ -1,56 +1,54 @@
-import React from 'react';
+import React from "react";
 import "../globals.css";
-import Image from "next/image";
+import BannerImage from "@/public/assets/banner-multimedia.png";
+import MainSectionBanner from "@/components/MainSectionBanner";
 import imgBanner from "@/public/assets/science-education-concepts-banner-vector.jpg";
+import MultimediaCarousel from "@/components/organisms/MultimediaCarousel";
 import Img from "next/image";
-
+import Link from "next/link";
 
 function MultimediaPage() {
     return (
         <div>
-            <div className="multimedia_banner">
-                <div className="contain_logo_title">
-                    <Img src={imgBanner} alt={""} className="multimedia_logo_banner"/>
-                    <div className="title_multimedia">
-                        <h3 className="title_multimedia_text">MULTIMEDIA</h3>
-                    </div>
-                </div>
+            <MainSectionBanner
+                acentColor="#80203D"
+                bannerImage={BannerImage}
+                sectionName={"MULTIMEDIA"}
+                sectionBannerQuestion={
+                    "¿Te gustaría mejorar tus habilidades educativas?"
+                }
+                sectionDescription={`En los cursos de Eduplanet podrás acceder a contenidos de calidad, que te ayudarán a desarrollar competencias pedagógicas, didácticas, tecnológicas y personales. Los cursos están adaptados a diferentes niveles, desde inicial hasta avanzado, y a diferentes modalidades, desde presencial hasta online.`}
+            />
 
-                <div className="contain_img_text">
-                        <Img src={imgBanner} alt={""} className="multimedia_img_banner"/>
-
-
-                    <div className="contain_text_multimedia">
-                        <h1 className="multimedia_title">¿Te gustaría mejorar tus habilidades educativas?</h1>
-                        <p className="multimedia_text">En los cursos de Eduplanet podrás acceder a contenidos de calidad, que te ayudarán a desarrollar competencias pedagógicas, didácticas, tecnológicas y personales. Los cursos están adaptados a diferentes niveles, desde inicial hasta avanzado, y a diferentes modalidades, desde presencial hasta online.</p>
-                    </div>
-                </div>
-            </div>
             <div className="contain_videos">
                 <div className="contain_text_video">
-                    <h1 className="text_video_reciente">Los vídeos más recientes</h1>
+                    <h1 className="text_video_reciente">
+                        Los vídeos más recientes
+                    </h1>
                 </div>
-                <div className="contain_carrusel">
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                </div>
+                <MultimediaCarousel />
+
                 <div className="contain_text_video">
                     <h1 className="text_video_reciente">Videoblogs</h1>
                 </div>
-                <div className="contain_carrusel">
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                </div>
+                <MultimediaCarousel />
+
                 <div className="contain_text_video">
                     <h1 className="text_video_reciente">Guías</h1>
                 </div>
-                <div className="contain_carrusel">
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                    <Img src={imgBanner} alt={""} className="img_carrusel"/>
-                </div>
+                <MultimediaCarousel />
+
+                <Link href="/multimedia/all">
+                        <h1
+                            className="titulo_blog_page"
+                            style={{ color: "#80203d" }}
+                        >
+                            TODOS LOS VIDEOS{" "}
+                            <span className="material-symbols-outlined">
+                                arrow_forward_ios
+                            </span>
+                        </h1>
+                    </Link>
             </div>
         </div>
     );
