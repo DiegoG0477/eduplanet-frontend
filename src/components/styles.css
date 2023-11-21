@@ -1091,7 +1091,7 @@ footer {
     display: flex;
 }
 .input_add_comment{
-    width: 75vw;
+    width: 65vw;
     padding: 10px;
     margin-left: 4vw;
     border-left: none;
@@ -1172,4 +1172,15 @@ footer {
     font-weight: bold;
     border-radius: 10px;
     font-size: 20px;
+}
+.btn_add_comment{
+    width: 8vw;
+    height: 5vh;
+    background-color: #20802A;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
 }
