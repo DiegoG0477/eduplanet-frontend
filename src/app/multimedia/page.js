@@ -2,9 +2,7 @@ import React from "react";
 import "../globals.css";
 import BannerImage from "@/public/assets/banner-multimedia.png";
 import MainSectionBanner from "@/components/MainSectionBanner";
-import imgBanner from "@/public/assets/science-education-concepts-banner-vector.jpg";
 import MultimediaCarousel from "@/components/organisms/MultimediaCarousel";
-import Img from "next/image";
 import Link from "next/link";
 
 function MultimediaPage() {
