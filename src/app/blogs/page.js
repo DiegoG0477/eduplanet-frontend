@@ -32,7 +32,7 @@ function blogPage() {
                 </div>
                 <CardBlogs/>
 
-                <Link href="/blogs/all">
+                {/* <Link href="/blogs/all">
                         <h1
                             className="titulo_blog_page"
                             style={{ color: "#144729" }}
@@ -42,7 +42,7 @@ function blogPage() {
                                 arrow_forward_ios
                             </span>
                         </h1>
-                    </Link>
+                    </Link> */}
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ export default function BookShoppingBody(props) {
     
     const getBook = async () => {
         const res = await axios.get(
-            `http://localhost:3001/v1/materials/${id}`,
+            `http://localhost:80/v1/materials/${id}`,
             { withCredentials: true }
         );
         setBook(res.data.data);
@@ -24,7 +24,7 @@ export default function BookShoppingBody(props) {
 
     const handleBuyOrder = async () => {
         const res = await axios.post(
-            "http://localhost:3001/v1/payment/create-order",
+            "http://localhost:80/v1/payment/create-order",
             { price: book.precio, title: book.titulo },
         );
 
@@ -39,7 +39,7 @@ export default function BookShoppingBody(props) {
     return (
         <>
             <div className="book-shopping-body">
-                <Img src={BookShopping} className="book-shopping-image" />
+                <Img src={book.portadaLibroUrl} className="book-shopping-image" height={300} width={100} />
                 <div className="book-shopping-data">
                     <h1 className="book-shopping-title">{book.titulo}</h1>
                     {props.status == "purchased" ? (

@@ -5,7 +5,7 @@ import "./styles.css"
 import { useState } from "react"
 import axios from "axios"
 import ButtonForm from "./ButtonForm"
-
+import Swal from 'sweetalert2'
 function FormAddBlog() {
     const [blog, setBlog] = useState({
         titulo:"",
@@ -25,8 +25,22 @@ function FormAddBlog() {
         form.append("titulo", blog.titulo)
         form.append("imagen",imagen)
         form.append("contenido",blog.texto)
-        await axios.post("http://localhost:80/v1/blogs",form, {withCredentials: true})
-        alert("se agrego el blog correctamente")
+        if(!blog.titulo || !imagen || !blog.texto){
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Faltan campos por llenar"
+          });
+        }else{
+          await axios.post("http://localhost:80/v1/blogs",form, {withCredentials: true})
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Se agrego correctamente",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        }
     }
   return (
     <form onSubmit={handleSubmit}>

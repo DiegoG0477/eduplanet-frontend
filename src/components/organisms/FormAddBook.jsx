@@ -42,7 +42,7 @@ export default function FormAddBook() {
         form.append("pdf", pdf);
 
         axios.defaults.withCredentials = true;
-        const status = await axios.post("http://localhost:3001/v1/materials/",form);
+        const status = await axios.post("http://localhost:80/v1/materials/",form);
 
         if(status.status === 201){
             alert("se agregó el blog correctamente");

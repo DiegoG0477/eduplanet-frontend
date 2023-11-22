@@ -1,4 +1,5 @@
 import FormAddBlog from "@/components/FormAddBlog"
+import Swal from 'sweetalert2'
 function addBlogPage() {
 
   return (

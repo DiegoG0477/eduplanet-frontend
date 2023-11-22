@@ -2,7 +2,10 @@ import Img from "next/image";
 import prueba from "@/public/assets/card-example.jpg";
 import DatosCardBlog from "./DatosCardBlog";
 function CardBlog(props) {
-    let contenido = props.contenido.length;
+    let contenido = props.contenido;
+    if(contenido){
+        contenido=contenido.lenght;
+    }
     let si=props.contenido;
     if (contenido > 170) {
         si = props.contenido.slice(0, 172) + "...";

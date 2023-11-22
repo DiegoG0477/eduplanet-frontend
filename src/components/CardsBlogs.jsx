@@ -6,7 +6,7 @@ import Link from "next/link";
 function CardsBlogs() {
     const [blogs, setBlogs] = useState([])
     let limit=3
-    let page=2
+    let page=1
     const uploadBlogs = async() =>{
         const res = await axios.get(`http://localhost:80/v1/blogs?limit=${limit}&page=${page}`,{withCredentials:true})
         setBlogs(res.data.data)

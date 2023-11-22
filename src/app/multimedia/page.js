@@ -36,7 +36,7 @@ function MultimediaPage() {
                 </div>
                 <MultimediaCarousel />
 
-                <Link href="/multimedia/all">
+                {/* <Link href="/multimedia/all">
                         <h1
                             className="titulo_blog_page"
                             style={{ color: "#80203d" }}
@@ -46,7 +46,7 @@ function MultimediaPage() {
                                 arrow_forward_ios
                             </span>
                         </h1>
-                    </Link>
+                    </Link> */}
             </div>
         </div>
     );

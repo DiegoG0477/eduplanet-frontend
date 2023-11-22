@@ -28,7 +28,7 @@ export default function Store() {
 
             {/* <BooksCollection collectionTitle="Colección: Padres de Familia" /> */}
 
-            <BooksLibrary />
+            {/* <BooksLibrary /> */}
         </>
     );
 }

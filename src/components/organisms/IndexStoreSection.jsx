@@ -15,6 +15,7 @@ export default function IndexStoreSection() {
                         marginLeft: "5vw",
                         marginTop: "9vh",
                     }}
+                    page={1}
                 />
             </div>
             <div className="button_section store">

@@ -11,7 +11,7 @@ export default function StoreCarouselCell(props) {
 
   const getBooks = async () => {
       const res = await axios.get(
-          `http://localhost:3001/v1/materials?limit=${limit}&page=${page}`,
+          `http://localhost:80/v1/materials?limit=${limit}&page=${page}`,
           { withCredentials: true }
       );
       setBooks(res.data.data);
@@ -25,6 +25,7 @@ export default function StoreCarouselCell(props) {
     <>
       <div className="carousel-cell" style={props.style}>
         {books.map((book, index) => (
+          // eslint-disable-next-line react/jsx-key
           <Link
             href={`/store/book/${[book.id_material]}`}
           >
