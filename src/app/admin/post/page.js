@@ -15,4 +15,4 @@ function PostAdminPage() {
   )
 }
 
-export default PostAdminPage
+export default PostAdminPage;
