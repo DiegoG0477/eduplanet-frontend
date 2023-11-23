@@ -2,6 +2,7 @@ import imagen1 from "@/public/assets/imagencard-1.jpg"
 import imagen2 from "@/public/assets/imagencard-2.jpg"
 import imagen3 from "@/public/assets/imgencard2.jpg"
 import CardAdmin from "@/components/CardAdmin"
+import Link from "next/link"
 function DashboardPage() {
   return (
     <div>

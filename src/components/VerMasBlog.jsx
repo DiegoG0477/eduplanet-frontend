@@ -1,6 +1,6 @@
 "use client"
+require('dotenv');
 import Img from "next/image";
-import imagen from "@/public/assets/card-example.jpg";
 import TextSubitleBlog from "@/components/TextSubitleBlog";
 import { useEffect,useState } from "react"
 import axios from "axios"
@@ -15,15 +15,15 @@ function VerMasBlog() {
     const [user, setUser] = useState("");
     const [comentario, setComentario] = useState("");
     const uploadBlog = async () => {
-        const res = await axios.get(`http://localhost:80/v1/blogs/${id}`, { withCredentials: true });
+        const res = await axios.get(`${process.env.HOST}/v1/blogs/${id}`, { withCredentials: true });
         setBlog(res.data.data);
     };
     const uploadComments = async () => {
-        const res = await axios.get(`http://localhost:80/v1/comentarios/blogs/${id}`, { withCredentials: true });
+        const res = await axios.get(`${process.env.HOST}/v1/comentarios/blogs/${id}`, { withCredentials: true });
         setComment(res.data.data);
     }
     const uploadUser = async () =>{
-        const res = await axios.get("http://localhost:80/v1/users/get/IdToken", {withCredentials:true})
+        const res = await axios.get(`${process.env.HOST}/v1/users/get/IdToken`, {withCredentials:true})
         setUser(res.data.data.email)
     }
 

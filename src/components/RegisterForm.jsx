@@ -1,4 +1,5 @@
 "use client"
+require('dotenv');
 import ButtonForm from "./ButtonForm";
 import InputForm from "./InputForm";
 import axios from "axios";
@@ -14,10 +15,9 @@ function RegisterForm() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    console.log(email, password);
     try {
       axios.defaults.withCredentials = true;
-      const response = await axios.post(`http://localhost:80/v1/auth/signup`, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_HOST}/v1/auth/signup`, {
         email:email,
         password:password,
         nombre:nombre,

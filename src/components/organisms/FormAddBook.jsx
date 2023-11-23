@@ -1,13 +1,17 @@
 "use client";
+require('dotenv');
 import ChooseBookThumbnail from "../molecules/ChooseBookThumbnail";
 import ChooseBookPdf from "../molecules/ChooseBookPdf";
 import TextAreaInput from "../TextAreaInput";
 import Feature from "../molecules/Feature";
 import ButtonForm from "../ButtonForm";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
 
 export default function FormAddBook() {
+    const id = useParams().id;
+    const [oldBook, setOldBook] = useState({})
     const [book, setBook] = useState({
         titulo: "",
         precio: "",
@@ -19,6 +23,30 @@ export default function FormAddBook() {
     });
     const [thumbnail, setThumbnail] = useState(null);
     const [pdf, setPdf] = useState(null);
+
+    const getBook = async () => {
+        console.log(id);
+        console.log(process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id);
+        const res = await axios.get(process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id, {
+            withCredentials: true,
+        });
+        console.log(res.data.data);
+
+        setOldBook({
+            titulo: res.data.data.titulo,
+            precio: res.data.data.precio,
+            editorial: res.data.data.editorial,
+            autor: res.data.data.autor,
+            anioMaterial: res.data.data.anioMaterial,
+            numeroPaginas: res.data.data.numeroPaginas,
+            descripcion: res.data.data.descripcion,
+        });
+    };
+
+
+    useEffect(() => {
+        getBook();
+    }, []);
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -42,12 +70,12 @@ export default function FormAddBook() {
         form.append("pdf", pdf);
 
         axios.defaults.withCredentials = true;
-        const status = await axios.post("http://localhost:3001/v1/materials/",form);
+        const status = await axios.post(process.env.NEXT_PUBLIC_HOST + "/v1/materials/",form);
 
         if(status.status === 201){
-            alert("se agregó el blog correctamente");
+            alert("se agregó el libro correctamente");
         }else{
-            alert("no se agregó el blog correctamente");
+            alert("no se agregó el libro correctamente");
         }
         console.log(book);
     };
@@ -55,13 +83,14 @@ export default function FormAddBook() {
     return (
         <form onSubmit={handleSubmit}>
             <div className="book-shopping-body">
-                <ChooseBookThumbnail method={setThumbnail} name="thumbnail" />
+                <ChooseBookThumbnail method={setThumbnail} name="thumbnail" value={oldBook.portadaLibroUrl} />
                 <div className="book-shopping-data">
                     <input
                         className="book-input-title"
                         type="text"
                         name="titulo"
-                        placeholder="Escribir titulo..."
+                        placeholder={"Escribir titulo..."}
+                        value={oldBook.titulo}
                         onChange={handleChange}
                     />
 
@@ -70,6 +99,7 @@ export default function FormAddBook() {
                         type="number"
                         name="precio"
                         placeholder="$..."
+                        value={oldBook.precio}
                         onChange={handleChange}
                     />
 
@@ -83,6 +113,7 @@ export default function FormAddBook() {
                                 name={"editorial"}
                                 method={handleChange}
                                 placeholder={"Editorial..."}
+                                value={oldBook.editorial}
                                 bookInput={true}
                                 spanText={"book_2"}
                             />
@@ -90,6 +121,7 @@ export default function FormAddBook() {
                                 type={"text"}
                                 name={"autor"}
                                 method={handleChange}
+                                value={oldBook.autor}
                                 placeholder={"Autor..."}
                                 bookInput={true}
                                 spanText={"person"}
@@ -99,6 +131,7 @@ export default function FormAddBook() {
                                 name={"anioMaterial"}
                                 method={handleChange}
                                 placeholder={"Año..."}
+                                value={oldBook.anioMaterial}
                                 bookInput={true}
                                 spanText={"calendar_month"}
                             />
@@ -110,6 +143,7 @@ export default function FormAddBook() {
                                 name={"numeroPaginas"}
                                 method={handleChange}
                                 placeholder={"N. Páginas..."}
+                                value={oldBook.numeroPaginas}
                                 bookInput={true}
                                 spanText={"description"}
                             />

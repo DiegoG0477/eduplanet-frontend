@@ -4,7 +4,7 @@ import ViewAll from '@/components/organisms/VIewAll'
 export default function AllBlogs() {
     return (
         <div>
-            <ViewAll typeData={"blog"} apiRoute={"/blogs"}/>  
+            <ViewAll typeData={"book"} apiRoute={"/materials"} route={"/store/edit/"}/>  
         </div>
     )
 }

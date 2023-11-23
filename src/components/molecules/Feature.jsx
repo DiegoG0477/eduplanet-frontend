@@ -12,6 +12,7 @@ export default function Feature(props) {
                     className="book-feature-input"
                     placeholder={props.placeholder}
                     onChange={props.method}
+                    value={props.value}
                 />
             ) : (
                 <p>{props.featureText}</p>

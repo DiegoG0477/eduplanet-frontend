@@ -1,4 +1,5 @@
 "use client";
+require('dotenv');
 import BookCard from "./BookCard";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -11,7 +12,7 @@ export default function StoreCarouselCell(props) {
 
   const getBooks = async () => {
       const res = await axios.get(
-          `http://localhost:3001/v1/materials?limit=${limit}&page=${page}`,
+          `${process.env.NEXT_PUBLIC_HOST}/v1/materials?limit=${limit}&page=${page}`,
           { withCredentials: true }
       );
       setBooks(res.data.data);

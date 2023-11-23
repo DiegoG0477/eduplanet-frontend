@@ -4,7 +4,7 @@ import Img from "next/image";
 import ButtonUploadAgainImg from "../ButtonUploadAgainImg";
 
 export default function ChooseBookThumbnail(props) {
-    const [file, setFile] = useState(null);
+    const [file, setFile] = useState(props.value);
 
     return (
         <div className="input-thumbnail-book">

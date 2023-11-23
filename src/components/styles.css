@@ -1184,3 +1184,50 @@ footer {
     margin-left: 1vw;
     margin-top: 0.5vw;
 }
+
+.all-items-body{
+    /* background: #F0F0F0; */
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 7vh;
+}
+
+.all-items-title{
+    color: #191F5A;
+}
+
+.items-search-bar{
+    height: 9vh;
+    margin-left: -9vw;
+    width: 100vw;
+    background: #203880;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.items-search-input{
+    width: 30vw;
+    border: none;
+    border-radius: 7px;
+    height: 5vh;
+    margin-right: 1vw;
+    padding-left: 1vw;
+}
+
+.items-search-input:focus{
+    outline: none;
+    border: 2px solid #2345B3;
+}
+
+.items-search-button{
+    width: 2.9vw;
+    /* height: 5vh; */
+    padding: 0.3rem;
+    border: none;
+    border-radius: 50%;
+    /* display: inline-block; */
+    background: white;
+    color: #191F5A;
+    font-weight: bold;
+}
