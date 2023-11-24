@@ -39,7 +39,7 @@ export default function BookShoppingBody(props) {
     return (
         <>
             <div className="book-shopping-body">
-                <Img src={book.portadaLibroUrl} className="book-shopping-image" height={300} width={100} />
+                <Img src={book.portadaLibroUrl} className="book-shopping-image" height={700} width={400} />
                 <div className="book-shopping-data">
                     <h1 className="book-shopping-title">{book.titulo}</h1>
                     {props.status == "purchased" ? (

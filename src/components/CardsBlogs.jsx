@@ -1,4 +1,5 @@
 "use client";
+require("dotenv");
 import CardBlog from "./CardBlog";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -6,9 +7,9 @@ import Link from "next/link";
 function CardsBlogs() {
     const [blogs, setBlogs] = useState([])
     let limit=3
-    let page=2
+    let page=1
     const uploadBlogs = async() =>{
-        const res = await axios.get(`http://localhost:80/v1/blogs?limit=${limit}&page=${page}`,{withCredentials:true})
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/v1/blogs?limit=${limit}&page=${page}`,{withCredentials:true})
         setBlogs(res.data.data)
     }
     useEffect(() => {

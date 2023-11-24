@@ -1,4 +1,5 @@
 "use client"
+require("dotenv");
 import axios from "axios"
 import { useEffect,useState } from "react"
 function DatosCardBlog(props) {
@@ -9,7 +10,7 @@ function DatosCardBlog(props) {
     const category= "Blog"
 
     const uploadUser = async(id) => {
-      const res = await axios.get("http://localhost:80/v1/users/"+id, {withCredentials: true})
+      const res = await axios.get(process.env.NEXT_PUBLIC_HOST + "/v1/users/"+id, {withCredentials: true})
       setUser({
         nombre: res.data.data.nombre,
         apellido: res.data.data.apellidoPat

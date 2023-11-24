@@ -1,8 +1,27 @@
+"use client";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import LibraryCard from "../atoms/LibraryCard";
 import BookImage from "@/public/assets/book-reference.png";
 
 export default function BooksLibrary() {
+    const [books, setBooks] = useState([]);
+    let limit = 4;
+    let page = 1;
+
+    const getBooks = async () => {
+        const res = await axios.get(
+            `${process.env.NEXT_PUBLIC_HOST}/v1/materials?limit=${limit}&page=${page}`,
+            { withCredentials: true }
+        );
+        setBooks(res.data.data);
+    };
+
+    useEffect(() => {
+        getBooks();
+    }, []);
+
     return (
         <div className="library">
             <div className="offers-content" style={{ marginTop: "5vh" }}>
@@ -19,12 +38,14 @@ export default function BooksLibrary() {
                 </div>
 
                 <div className="library-content">
-                    {/* Reemplazar por un mapeo de datos que contenga las 4 imagenes de la 
-                pagina 1 de la biblioteca en mysql */}
-                    <LibraryCard image={BookImage} />
-                    <LibraryCard image={BookImage} />
-                    <LibraryCard image={BookImage} />
-                    <LibraryCard image={BookImage} />
+                    {books.map((book, index) => (
+                        <Link href={`/store/book/${book.id_material}`}>
+                            <LibraryCard
+                                key={index}
+                                image={book.portada_libro}
+                            />
+                        </Link>
+                    ))}
                 </div>
             </div>
         </div>

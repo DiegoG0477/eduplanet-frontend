@@ -5,10 +5,10 @@ export default function GenericCard(props) {
     return (
         <Link href={props.route}>
             <div className="generic-card">
-                <Img src={props.image} width={100} height={300} />
+                <Img src={props.image} width={600} height={800} className="generic-card-image" />
                 <div className="generic-card-text">
-                    <h1>{props.title}</h1>
-                    <p>{props.price}</p>
+                    <h1 className="generic-card-title">{props.title}</h1>
+                    <h1 className="generic-card-title">${" " + props.price}</h1>
                 </div>
             </div>
         </Link>

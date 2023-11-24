@@ -1,11 +1,11 @@
 import FormAddBlog from "@/components/FormAddBlog"
-function addBlogPage() {
+function editBlogPage() {
 
   return (
     <div className='body_blog'>
-      <FormAddBlog/>
+      <FormAddBlog edit={true}/>
       </div>
   )
 }
 
-export default addBlogPage;
+export default editBlogPage;

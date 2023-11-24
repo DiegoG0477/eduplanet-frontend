@@ -30,6 +30,7 @@ function blogPage() {
                         escuelas
                     </h1>
                 </div>
+                
                 <CardBlogs/>
 
                 <Link href="/blogs/all">

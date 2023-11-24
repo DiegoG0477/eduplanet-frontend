@@ -2,12 +2,14 @@
 require('dotenv');
 import React, { useState, useEffect } from "react";
 import GenericCard from "./GenericCard";
+import BlogGenericCard from "./BlogGenericCard.jsx";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
 export default function ViewAll(props) {
     const [data, setData] = useState([]);
     const apiRoute = props.apiRoute;
+    const [cardsPerGroup, setCardsPerGroup] = useState(5);
     const type = props.typeData;
     var array = [];
 
@@ -34,10 +36,13 @@ export default function ViewAll(props) {
 
     useEffect(() => {
         loadData();
+
+        if(type === "blog"){
+            setCardsPerGroup(3);
+        }
     }, []);
 
     const totalCards = data.length;
-    const cardsPerGroup = 5;
     const [currentGroup, setCurrentGroup] = useState(1);
     const previousGroup = currentGroup - 1;
     const nextGroup = currentGroup + 1;
@@ -51,20 +56,17 @@ export default function ViewAll(props) {
                     key={index}
                     title={item.titulo}
                     image={item.portada_libro}
+                    price={item.precio}
                     route={`${props.route}${item.id_material}`}
                 />
-            ) : (
-                <GenericCard
+            ) : (type === "blog") ? (
+                <BlogGenericCard
                     key={index}
-                    title={item.title}
-                    description={item.description}
-                    image={item.image}
-                    route={`/blogs/${item.id}`}
+                    title={item.titulo}
+                    image={item.url_imagen}
+                    route={`${props.route}${item.id_blog}`}
                 />
-            )
-            (props.edit ? (
-                <button className="button_navigate" onClick={goStoreEdit(item.id_material)}>Editar</button>
-            ) : (null)));
+            ) : (null));
         }
         return null;
     });
@@ -100,9 +102,16 @@ export default function ViewAll(props) {
                         <span className="material-symbols-outlined">search</span>
                     </button>
                 </div>
+
+                {
+                    (type === "blog") ? (
+                        <div className="blog_contain_search">{cardsToShow}</div>
+                    ) : (<div className="contain_search">{cardsToShow}</div>)
+                }
+              
             </div>
 
-            <div className="contain_search">{cardsToShow}</div>
+            
             <div className="contain_navigate">
                 <button
                     className="button_navigate"

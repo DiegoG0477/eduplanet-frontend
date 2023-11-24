@@ -1,10 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Img from "next/image";
 import ButtonUploadAgainImg from "../ButtonUploadAgainImg";
 
 export default function ChooseBookThumbnail(props) {
-    const [file, setFile] = useState(props.value);
+    const [file, setFile] = useState(null);
+
+    useEffect(() => {
+        setFile(props.value);
+    }
+    , [props.value]);
 
     return (
         <div className="input-thumbnail-book">
@@ -33,7 +38,10 @@ export default function ChooseBookThumbnail(props) {
                         />
                     </div>
                     <Img
-                        src={URL.createObjectURL(file)}
+                        src={
+                            (props.edit && file.toString().includes("https://res.cloudinary.com/")) ? file  :
+                            URL.createObjectURL(file)
+                        }
                         alt="agregar"
                         width={300}
                         height={100}

@@ -1,5 +1,5 @@
 "use client";
-require('dotenv');
+require("dotenv");
 import ChooseBookThumbnail from "../molecules/ChooseBookThumbnail";
 import ChooseBookPdf from "../molecules/ChooseBookPdf";
 import TextAreaInput from "../TextAreaInput";
@@ -9,9 +9,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 
-export default function FormAddBook() {
+export default function FormAddBook(props) {
     const id = useParams().id;
-    const [oldBook, setOldBook] = useState({})
     const [book, setBook] = useState({
         titulo: "",
         precio: "",
@@ -27,22 +26,27 @@ export default function FormAddBook() {
     const getBook = async () => {
         console.log(id);
         console.log(process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id);
-        const res = await axios.get(process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id, {
-            withCredentials: true,
-        });
+        const res = await axios.get(
+            process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id,
+            {
+                withCredentials: true,
+            }
+        );
         console.log(res.data.data);
 
-        setOldBook({
-            titulo: res.data.data.titulo,
-            precio: res.data.data.precio,
-            editorial: res.data.data.editorial,
-            autor: res.data.data.autor,
-            anioMaterial: res.data.data.anioMaterial,
-            numeroPaginas: res.data.data.numeroPaginas,
-            descripcion: res.data.data.descripcion,
-        });
+        if (props.edit) {
+            setBook({
+                titulo: res.data.data.titulo,
+                precio: res.data.data.precio,
+                editorial: res.data.data.editorial,
+                autor: res.data.data.autor,
+                anioMaterial: res.data.data.anioMaterial,
+                numeroPaginas: res.data.data.numeroPaginas,
+                descripcion: res.data.data.descripcion,
+                portadaLibroUrl: res.data.data.portadaLibroUrl,
+            });
+        }
     };
-
 
     useEffect(() => {
         getBook();
@@ -57,40 +61,60 @@ export default function FormAddBook() {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        const form = new FormData()
+        e.preventDefault();
+        const form = new FormData();
         form.append("titulo", book.titulo);
         form.append("precio", book.precio);
         form.append("editorial", book.editorial);
         form.append("autor", book.autor);
-        form.append("anioMaterial", book.anioMaterial);
-        form.append("numeroPaginas", book.numeroPaginas);
+        form.append("year_material", book.anioMaterial);
+        form.append("numero_paginas", book.numeroPaginas);
         form.append("descripcion", book.descripcion);
         form.append("portada", thumbnail);
         form.append("pdf", pdf);
 
         axios.defaults.withCredentials = true;
-        const status = await axios.post(process.env.NEXT_PUBLIC_HOST + "/v1/materials/",form);
 
-        if(status.status === 201){
-            alert("se agregó el libro correctamente");
-        }else{
-            alert("no se agregó el libro correctamente");
+        if (props.edit) {
+            const status = await axios.patch(
+                process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id,
+                form
+            );
+            if (status.status === 200) {
+                alert("se editó el libro correctamente");
+            } else {
+                alert("no se editó el libro correctamente");
+            }
+        } else {
+            const status = await axios.post(
+                process.env.NEXT_PUBLIC_HOST + "/v1/materials/",
+                form
+            );
+
+            if (status.status === 201) {
+                alert("se agregó el libro correctamente");
+            } else {
+                alert("no se agregó el libro correctamente");
+            }
         }
-        console.log(book);
     };
 
     return (
         <form onSubmit={handleSubmit}>
             <div className="book-shopping-body">
-                <ChooseBookThumbnail method={setThumbnail} name="thumbnail" value={oldBook.portadaLibroUrl} />
+                <ChooseBookThumbnail
+                    method={setThumbnail}
+                    name="thumbnail"
+                    value={book.portadaLibroUrl}
+                    edit={props.edit}
+                />
                 <div className="book-shopping-data">
                     <input
                         className="book-input-title"
                         type="text"
                         name="titulo"
                         placeholder={"Escribir titulo..."}
-                        value={oldBook.titulo}
+                        value={book.titulo}
                         onChange={handleChange}
                     />
 
@@ -98,8 +122,9 @@ export default function FormAddBook() {
                         className="book-input-title book-input-price"
                         type="number"
                         name="precio"
+                        // step="0.01"
                         placeholder="$..."
-                        value={oldBook.precio}
+                        value={book.precio}
                         onChange={handleChange}
                     />
 
@@ -113,7 +138,7 @@ export default function FormAddBook() {
                                 name={"editorial"}
                                 method={handleChange}
                                 placeholder={"Editorial..."}
-                                value={oldBook.editorial}
+                                value={book.editorial}
                                 bookInput={true}
                                 spanText={"book_2"}
                             />
@@ -121,7 +146,7 @@ export default function FormAddBook() {
                                 type={"text"}
                                 name={"autor"}
                                 method={handleChange}
-                                value={oldBook.autor}
+                                value={book.autor}
                                 placeholder={"Autor..."}
                                 bookInput={true}
                                 spanText={"person"}
@@ -131,7 +156,7 @@ export default function FormAddBook() {
                                 name={"anioMaterial"}
                                 method={handleChange}
                                 placeholder={"Año..."}
-                                value={oldBook.anioMaterial}
+                                value={book.anioMaterial}
                                 bookInput={true}
                                 spanText={"calendar_month"}
                             />
@@ -143,7 +168,7 @@ export default function FormAddBook() {
                                 name={"numeroPaginas"}
                                 method={handleChange}
                                 placeholder={"N. Páginas..."}
-                                value={oldBook.numeroPaginas}
+                                value={book.numeroPaginas}
                                 bookInput={true}
                                 spanText={"description"}
                             />
@@ -161,15 +186,27 @@ export default function FormAddBook() {
                 <h2>Descripción</h2>
                 <TextAreaInput
                     name="descripcion"
-                    style={{ borderRadius:"7px", border:"2px solid #121D41" }}
+                    style={{ borderRadius: "7px", border: "2px solid #121D41" }}
                     fun={handleChange}
+                    value={book.descripcion}
                     holder="Escribir descripción..."
                 />
             </div>
 
-            <div className="button_add_blog">
-                <ButtonForm text="Subir Libro" />
-            </div>
+            {props.edit ? (
+                <div className="button-edit-content">
+                    <div className="button_add_blog">
+                        <ButtonForm text="Editar Libro" />
+                    </div>
+                    {/* <div className="button_add_blog">
+                        <ButtonForm text="Eliminar libro" style={{background:"#b82727"}} />
+                    </div> */}
+                </div>
+            ) : (
+                <div className="button_add_blog">
+                    <ButtonForm text="Subir Libro" />
+                </div>
+            )}
         </form>
     );
 }
