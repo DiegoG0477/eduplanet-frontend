@@ -25,9 +25,9 @@ export default function FormAddBook(props) {
 
     const getBook = async () => {
         console.log(id);
-        console.log(process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id);
+        console.log(process.env.NEXT_PUBLIC_HOST + "/materials/" + id);
         const res = await axios.get(
-            process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id,
+            process.env.NEXT_PUBLIC_HOST + "/materials/" + id,
             {
                 withCredentials: true,
             }
@@ -77,7 +77,7 @@ export default function FormAddBook(props) {
 
         if (props.edit) {
             const status = await axios.patch(
-                process.env.NEXT_PUBLIC_HOST + "/v1/materials/" + id,
+                process.env.NEXT_PUBLIC_HOST + "/materials/" + id,
                 form
             );
             if (status.status === 200) {
@@ -87,7 +87,7 @@ export default function FormAddBook(props) {
             }
         } else {
             const status = await axios.post(
-                process.env.NEXT_PUBLIC_HOST + "/v1/materials/",
+                process.env.NEXT_PUBLIC_HOST + "/materials/",
                 form
             );
 

@@ -18,9 +18,9 @@ function FormAddBlog(props) {
 
     const getBlog = async () => {
         console.log(id);
-        console.log(process.env.NEXT_PUBLIC_HOST + "/v1/blogs/" + id);
+        console.log(process.env.NEXT_PUBLIC_HOST + "/blogs/" + id);
         const res = await axios.get(
-            process.env.NEXT_PUBLIC_HOST + "/v1/blogs/" + id,
+            process.env.NEXT_PUBLIC_HOST + "/blogs/" + id,
             {
                 withCredentials: true,
             }
@@ -43,7 +43,7 @@ function FormAddBlog(props) {
     const deleteBlog = async (e) => {
         e.preventDefault();
         const res = await axios.delete(
-            process.env.NEXT_PUBLIC_HOST + "/v1/blogs/" + id,
+            process.env.NEXT_PUBLIC_HOST + "/blogs/" + id,
             { withCredentials: true }
         );
         if (res.status == 200) {
@@ -69,9 +69,9 @@ function FormAddBlog(props) {
             formEdit.append("url_imagen", imagen);
             formEdit.append("texto_contenido", blog.texto);
 
-            console.log(process.env.NEXT_PUBLIC_HOST + "/v1/blogs/blog/" + id)
+            console.log(process.env.NEXT_PUBLIC_HOST + "/blogs/blog/" + id)
             const res = await axios.patch(
-                process.env.NEXT_PUBLIC_HOST + "/v1/blogs/blog/" + id,
+                process.env.NEXT_PUBLIC_HOST + "/blogs/blog/" + id,
                 formEdit,
                 { withCredentials: true }
             );
@@ -86,7 +86,7 @@ function FormAddBlog(props) {
             form.append("imagen", imagen);
             form.append("contenido", blog.texto);
             const res = await axios.post(
-                process.env.NEXT_PUBLIC_HOST + "/v1/blogs/",
+                process.env.NEXT_PUBLIC_HOST + "/blogs/",
                 form,
                 { withCredentials: true }
             );

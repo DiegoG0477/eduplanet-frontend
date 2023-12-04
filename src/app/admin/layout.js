@@ -3,7 +3,7 @@ function LayoutAdmin({ children }) {
   return (
     <>
     <body>
-        <Nav/>
+        {/* <Nav/> */}
         {children}
     </body>
     </>

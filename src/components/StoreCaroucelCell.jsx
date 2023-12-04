@@ -7,12 +7,12 @@ import axios from "axios";
 
 export default function StoreCarouselCell(props) {
   const [books, setBooks] = useState([]);
-  let limit = 5;
-  let page = props.page;
+  const limit = 5;
+  const page = props.page;
 
   const getBooks = async () => {
       const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_HOST}/v1/materials?limit=${limit}&page=${page}`,
+          `${process.env.NEXT_PUBLIC_HOST}/materials?limit=${limit}&page=${page}`,
           { withCredentials: true }
       );
       setBooks(res.data.data);

@@ -17,7 +17,7 @@ function RegisterForm() {
     e.preventDefault();
     try {
       axios.defaults.withCredentials = true;
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_HOST}/v1/auth/signup`, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_HOST}/auth/signup`, {
         email:email,
         password:password,
         nombre:nombre,

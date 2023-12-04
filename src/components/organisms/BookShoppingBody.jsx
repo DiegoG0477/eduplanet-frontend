@@ -15,7 +15,7 @@ export default function BookShoppingBody(props) {
     
     const getBook = async () => {
         const res = await axios.get(
-            `${process.env.NEXT_PUBLIC_HOST}/v1/materials/${id}`,
+            `${process.env.NEXT_PUBLIC_HOST}/materials/${id}`,
             { withCredentials: true }
         );
         setBook(res.data.data);
@@ -24,7 +24,7 @@ export default function BookShoppingBody(props) {
 
     const handleBuyOrder = async () => {
         const res = await axios.post(
-            process.env.NEXT_PUBLIC_HOST + "/v1/payment/create-order",
+            process.env.NEXT_PUBLIC_HOST + "/payment/create-order",
             { price: book.precio, title: book.titulo },
         );
 

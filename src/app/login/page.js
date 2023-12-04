@@ -8,7 +8,7 @@ function LoginPage() {
       <NavForms />
       <div className="login_form">
         <LoginForm />
-        <p className="text_form">¿olvidaste tu contraseña?</p>
+        <p className="text_form">¿Olvidaste tu contraseña?</p>
         <div className="line_form"></div>
         <div className="link_button_register">
             <p className="text_cuenta">¿No tienes cuenta?</p>

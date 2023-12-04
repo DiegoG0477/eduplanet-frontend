@@ -15,15 +15,15 @@ function VerMasBlog() {
     const [user, setUser] = useState("");
     const [comentario, setComentario] = useState("");
     const uploadBlog = async () => {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/v1/blogs/${id}`, { withCredentials: true });
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/blogs/${id}`, { withCredentials: true });
         setBlog(res.data.data);
     };
     const uploadComments = async () => {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/v1/comentarios/blogs/${id}`, { withCredentials: true });
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/comentarios/blogs/${id}`, { withCredentials: true });
         setComment(res.data.data);
     }
     const uploadUser = async () =>{
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/v1/users/get/IdToken`, {withCredentials:true})
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/users/get/IdToken`, {withCredentials:true})
         setUser(res.data.data.email)
     }
 
@@ -51,7 +51,7 @@ function VerMasBlog() {
                 text: "Faltan campos por llenar"
               });
         }else{
-            axios.post(`${process.env.NEXT_PUBLIC_HOST}/v1/comentarios/${id}`,comentario,{withCredentials:true})
+            axios.post(`${process.env.NEXT_PUBLIC_HOST}/comentarios/${id}`,comentario,{withCredentials:true})
             Swal.fire({
                 position: "center",
                 icon: "success",

@@ -15,8 +15,8 @@ export default function ViewAll(props) {
 
     const loadData = async () => {
         try {
-            console.log(process.env.NEXT_PUBLIC_HOST + "/v1" + apiRoute);
-            const response = await axios.get(process.env.NEXT_PUBLIC_HOST + "/v1" + apiRoute, {
+            console.log(process.env.NEXT_PUBLIC_HOST + apiRoute);
+            const response = await axios.get(process.env.NEXT_PUBLIC_HOST + apiRoute, {
                 withCredentials: true,
             });
 
@@ -92,7 +92,7 @@ export default function ViewAll(props) {
             <div>
                 <h1 className="all-items-title">Todos los artículos</h1>
 
-                <div className="items-search-bar">
+                {/* <div className="items-search-bar">
                     <input
                         type="text"
                         className="items-search-input"
@@ -101,7 +101,7 @@ export default function ViewAll(props) {
                     <button className="items-search-button">
                         <span className="material-symbols-outlined">search</span>
                     </button>
-                </div>
+                </div> */}
 
                 {
                     (type === "blog") ? (

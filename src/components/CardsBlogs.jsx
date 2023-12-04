@@ -9,7 +9,7 @@ function CardsBlogs() {
     let limit=3
     let page=1
     const uploadBlogs = async() =>{
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/v1/blogs?limit=${limit}&page=${page}`,{withCredentials:true})
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_HOST}/blogs?limit=${limit}&page=${page}`,{withCredentials:true})
         setBlogs(res.data.data)
     }
     useEffect(() => {

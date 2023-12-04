@@ -16,7 +16,7 @@ function LoginForm() {
     console.log(email, password);
     try {
       axios.defaults.withCredentials = true;
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_HOST}/v1/auth/login/${email}/${password}`);
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_HOST}/auth/login/${email}/${password}`);
       console.log(email + " " + password)
       console.log(response);
       router.push('/');
