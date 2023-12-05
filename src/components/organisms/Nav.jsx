@@ -15,7 +15,7 @@ export default function Nav(props) {
         try {
             axios.defaults.withCredentials = true;
             const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_HOST}/v1/auth/logout`
+                `${process.env.NEXT_PUBLIC_HOST}/auth/logout`
             );
 
             console.log(response);
